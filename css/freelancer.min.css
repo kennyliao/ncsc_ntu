@@ -221,6 +221,14 @@ header .intro-text .skills {
     border: none
 }
 
+.navbar-custom_new {
+    background: none;
+    /*background: url("../img/pic/background.JPG");*/
+    background-size: cover; 
+    font-weight: 700;
+    border: none
+}
+
 .navbar-custom a:focus {
     outline: 0
 }
@@ -297,6 +305,7 @@ header .intro-text .skills {
 }
 
 section.cta {
+    padding: 60px ; 
   position: relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -310,6 +319,7 @@ section.cta {
 
 
 section.cta .cta-content {
+ 
   position: relative;
   z-index: 1;
 }
@@ -329,8 +339,8 @@ section {
 #to-top {
   display: none;
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  /*top: 5px;
+  left: 5px;*/
 }
 
 #to-header {
@@ -402,10 +412,15 @@ section.success {
 
     section.cta {
         background: #141628;
+        padding:initial;
 
     }
     #home_hidden {
       display: none;
+    }
+    #to-top {
+      display: block;
+      
     }
 
 }

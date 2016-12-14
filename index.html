@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app" ng-controller="IndexController">
+<html lang="en" ng-app="app" ng-controller="IndexController" ng-init="homepage=true">
 
 <head>
     <meta charset="utf-8">
@@ -21,6 +21,7 @@
     <script type="text/javascript" src="lib/angular/angular.js"></script>
     <script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="lib/angular-animate/angular-animate.js"></script>
     <script src="app.js"></script>
@@ -43,23 +44,98 @@
 </head>
 
 <body id="page-top" class="index">
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div id="to-top" class="navbar navbar-default navbar-fixed-top navbar-custom" ng-if="homepage">
+        <div class="container">
+            <div  class="navbar-header page-scroll">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <div class="navbar-header">                
+                        <a href="#" >
+                            <img src="img/pic/logo.JPG" alt="">
+                        </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav nav-justified">
+                        <li>
+                            <a class="text_white" href="#news#page-top"><h4>最新消息</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#about#page-top"><h4>關於</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#instrument#page-top"><h4>實驗室</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#members#page-top"><h4>成員</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#credit#page-top"><h4>學分學程</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#download#page-top"><h4>相關下載</h4></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <span id="to-top" href="#page-top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></span> -->
+    </div>
+    <div class="row navbar-fixed-top navbar-custom" ng-if="!homepage">
+        <div class="container">
+            <div  class="navbar-header page-scroll">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <div class="navbar-header">                
+                        <a href="#" >
+                            <img src="img/pic/logo.JPG" alt="">
+                        </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav nav-justified">
+                        <li>
+                            <a class="text_white" href="#news#page-top"><h4>最新消息</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#about#page-top"><h4>關於</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#instrument#page-top"><h4>實驗室</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#members#page-top"><h4>成員</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#credit#page-top"><h4>學分學程</h4></a>
+                        </li>
+                        <li>
+                            <a class="text_white" href="#download#page-top"><h4>相關下載</h4></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <div class="navbar-header">
-                    <a class="navbar-brand " href="#" ng-click="home(1)">
-                        <img src="img/pic/logo.JPG" alt="">
-                    </a>
+                <div class="navbar-header">                
+                        <a class="navbar-brand " href="#" ng-click="home(1)">
+                            <img src="img/pic/logo.JPG" alt="">
+                        </a>
                 </div>
+                
                 <a id="to-top" href="#page-top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
                 <ul class="nav  nav-justified">
+                    
                     <li>
-                        <a class="text_white" href="#news" ng-click="home()"><h4>最新消息</h4></a>
+                        <a class="text_white" href="#news"  ng-click="home()"><h4>最新消息</h4></a>
                     </li>
                     <li>
                         <a class="text_white" href="#about" ng-click="home()"><h4>關於</h4></a>
@@ -78,12 +154,14 @@
                     </li>
                 </ul>
             </div>
-    </nav>
+
+    </nav> -->
     <header>
         <div class="container">
         </div>
     </header>
     <div ui-view></div>
+   
     <!-- Footer -->
     <footer>
         <div class="footer-above">
