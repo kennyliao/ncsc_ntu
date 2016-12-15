@@ -229,6 +229,17 @@ header .intro-text .skills {
     border: none
 }
 
+/* Icon when the collapsible content is shown */
+  .btn_new:after {
+    font-family: "Glyphicons Halflings";
+    content:"\e253";
+    float: right;
+    margin-left: 15px;
+  }
+  /* Icon when the collapsible content is hidden */
+  .btn_new.collapsed:after {
+    content:"\e250";
+}
 .navbar-custom a:focus {
     outline: 0
 }
