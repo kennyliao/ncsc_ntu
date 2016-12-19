@@ -48,12 +48,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
             
         })
 
-        .state('/members_form', {
-           url: '/members_form',
-           templateUrl: 'members/views/form.html',
-           controller:  'MembersController'
-            
+        .state('members_form', {
+            url: '/members/:id/members_form',
+            templateUrl:'members/views/form.html',
+            controller: 'MembersFormController'
         })
+
 
         .state('/credit', {
            url: '/credit',
