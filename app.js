@@ -5,12 +5,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         
         // HOME STATES AND NESTED VIEWS ========================================
+        
+
         .state('home', {
             // url: '/home',
             // templateUrl: 'home.html',
             // controller:  'IndexController'
             url: '/home',
             templateUrl: 'home/views/views.html',
+            controller:  'HomeController'
+        })
+
+        .state('home_en', {
+
+            url: '/home_en',
+            templateUrl: 'home/views/views_en.html',
             controller:  'HomeController'
         })
 
@@ -33,6 +42,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
            controller:  'NewsController'
             
         })
+
+        .state('news_form', {
+            url: '/news/:id/news_form',
+            templateUrl:'news/views/form.html',
+            controller: 'NewsFormController'
+        })
+
 
         .state('instrument', {
            url: '/instrument',

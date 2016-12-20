@@ -23,7 +23,32 @@ app
 					console.log(err);
 
 				});
-    });
+    })
+
+    .controller('NewsFormController',function($scope,$http,$filter,toastr,$base64,$rootScope,$location,$stateParams) {
+    	//非首頁
+    	var valueToPass = "0";
+	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
+
+   		var value=$stateParams.id;     
+
+                var url_address = 'geJSONt/data_news.php?page=news&id='+value;
+                $http.get(url_address).then(
+
+				function(data) {
+
+					$scope.model = data.data.pagedata;
+
+					
+				},
+				function(err) {
+
+					console.log(err);
+
+				});
+	    
+    })
+    ;
 
     // data.products = $.grep(data.products, function( a ) {
     //     return (a.proType == 'ap');

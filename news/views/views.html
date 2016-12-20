@@ -50,7 +50,7 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'1'}:true|limitTo:5">                                    
                                         <p>
-                                            {{New.titleZH_TW}}
+                                           <a href="#/news/{{New.newsNo}}/news_form"> {{New.titleZH_TW}}</a>
                                         </p>
                                         <small>
                                             {{New.date}}
@@ -90,7 +90,7 @@
                                     <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'2'}:true|limitTo:5">
                                     
                                         <p>
-                                            {{New.titleZH_TW}}
+                                            <a href="#/news/{{New.newsNo}}/news_form">{{New.titleZH_TW}}</a>
                                         </p>
                                         <small>
                                             {{New.date}}
@@ -131,7 +131,7 @@
                                     <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5">
                                     
                                         <p>
-                                            {{New.titleZH_TW}}
+                                            <a href="#/news/{{New.newsNo}}/news_form">{{New.titleZH_TW}}</a>
                                         </p>
                                         <small>
                                             {{New.date}}
