@@ -5,7 +5,7 @@
  */
 
 body {
-    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Lato, "Microsoft Jhenghei", 'Helvetica Neue', Helvetica, Arial, sans-serif;
     overflow-x: hidden
 }
 
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, "Microsoft Jhenghei","Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700
 }
@@ -103,6 +103,31 @@ header {
     background-size: cover;*/   
 }
 
+div#to-top div.navbar-header div.logo img,.navbar-fixed-top div.navbar-header div.logo img,section.cta div.logo img{
+    width: 150px;
+    margin-right: 20px;
+}
+section.cta div.pic img{
+    width: 80%;
+}
+section div.aboutimg{
+    width: 100%;
+    height: 240px;
+    margin-top: -41px;
+    background-size:cover;
+}
+section h2.aboutTitle{
+    height: 100px;
+    margin-top: -50px;
+    background-color: #fff;
+    padding-top: 30px;
+}
+div.container div.aboutimg{
+    margin-top: -41px;
+}
+div.container div.aboutimg img{
+    width: 100%;
+}
 .carousel-control {
   padding-top:10%;
   width:5%;

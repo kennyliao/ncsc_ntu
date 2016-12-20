@@ -4,9 +4,9 @@
         <div class="container">
             <div class="row col-sm-12"> 
                 <div class="col-sm-8">
-                <div class="navbar-header">                
+                <div class="navbar-header logo">                
                         <a href="#" >
-                            <img src="img/pic/logo.JPG" alt="">
+                            <img src="img/pic/ncsc_logo_white.png" alt="">
                         </a>
                 </div>
 
@@ -26,16 +26,16 @@
                 </div>
             </div>
            <br /><br /><br /><br />
-            <div class="row col-sm-12">
-                <div class="col-sm-6">
-                    <img class="img-responsive " src="http://placehold.it/450x350" alt="">
+            <div class="row col-sm-12 pic">
+                <div class="col-sm-6" ng-model="hero">
+                    <img class="img-responsive " src="{{hero[0].fileLink}}" alt="">
                     <br>
-                    <img class="img-responsive " src="http://placehold.it/450x350" alt="">
+                    <img class="img-responsive " src="{{hero[1].fileLink}}" alt="">
                 </div>
                 <div id="home_hidden" class="col-sm-4">
-                    <img class="img-responsive center-block" src="http://placehold.it/225x350" alt="">
+                    <img class="img-responsive center-block" src="{{hero[2].fileLink}}" alt="">
                         <br>
-                        <img class="img-responsive center-block" src="http://placehold.it/225x280" alt="">
+                        <img class="img-responsive center-block" src="{{hero[3].fileLink}}" alt="">
                 </div>
                 <div class="col-sm-2" id="home_hidden">
                     <div class="row col-sm-12">
@@ -78,63 +78,22 @@
         <br>
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <div class="col-sm-12">
+                <div class="col-sm-12" ng-repeat="New in news|limitTo:5">
                     <p class="col-sm-10">
-                        台灣大學明治大學神經生物與認知科學研究交流會議
+                        {{New.titleZH_TW}}
                     </p>
                     <p class="col-sm-2 text-muted">
-                        演講
+                        {{New.nameZH_TW}}
                     </p>
                     <small>
-                                        2016.11.09
-                                    </small>
+                        {{New.date}}
+                    </small>
                     <hr>
-                    <p class="col-sm-10">
-                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        研討會
-                    </p>
-                    <small>
-                                        2016.10.27
-                                    </small>
-                    <hr>
-                    <p class="col-sm-10">
-                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        學分學程
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        研討會
-                    </p>
-                    <small>
-                                        2016.10.19
-                                    </small>
-                    <hr>
-                    <p class="col-sm-10">
-                        許禕芳教授 (臺灣師範大學教育心理與輔導學系)
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        學分學程
-                    </p>
-                    <small>
-                                        2016.10.19
-                                    </small>
-                    <hr>
-                    <p class="col-sm-10">
-                        本學期12月1日開始開放學程申請,12月31日截止
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        演講
-                    </p>
-                    <small>
-                                        2016.10.17
-                                    </small>
-                    <hr>
-                    <a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    
+                    
                 </div>
-            </div>
+                <div class="col-sm-12"><a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                
         </div>
     </div>
 </section>

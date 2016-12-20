@@ -8,7 +8,34 @@ app
 	     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 		
 
+		//最新消息
+	     var url_address = 'geJSONt/data.php?page=home_news';
+	     var url_address_hero = 'geJSONt/data.php?page=home_hero';
+			$http.get(url_address).then(
 
-		
+				function(data) {
+
+					$scope.news = data.data.pagedata;
+
+
+				},
+				function(err) {
+
+					console.log(err);
+
+				});
+
+		$http.get(url_address_hero).then(
+
+				function(data) {
+
+					$scope.hero = data.data.pagedata;
+					console.log(data);
+				},
+				function(err) {
+
+					console.log(err);
+
+				});
 
     });

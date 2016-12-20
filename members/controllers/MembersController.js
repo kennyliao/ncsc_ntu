@@ -8,7 +8,7 @@ app
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 
-	    var url_address = '../geJSONt/data.php?page=members';
+	    var url_address = 'geJSONt/data.php?page=members';
 
 			$http.get(url_address).then(
 

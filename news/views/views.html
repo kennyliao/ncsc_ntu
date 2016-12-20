@@ -48,9 +48,9 @@
                             <div class="row">
                             
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12"    ng-repeat="New in news">                                    
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'1'}:true|limitTo:5">                                    
                                         <p>
-                                            {{New.contentZH_TW}}
+                                            {{New.titleZH_TW}}
                                         </p>
                                         <small>
                                             {{New.date}}
@@ -87,56 +87,21 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'2'}:true|limitTo:5">
                                     
-                                    <p>
-                                        台灣大學明治大學神經生物與認知科學研究交流會議
-                                    </p>
-                                    <small>
-                                        2016.11.09
-                                    </small>
-                                    
-                                    <hr>
-                                    <p>
-                                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                                    </p>
-                                    <small>
-                                        2016.10.27
-                                    </small>
-                                    
-                                    <hr>
-                                    <p>
-                                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                                    </p>
-                                    <small>
-                                        2016.10.19
-                                    </small>
-                                    
-                                    <hr>
+                                        <p>
+                                            {{New.titleZH_TW}}
+                                        </p>
+                                        <small>
+                                            {{New.date}}
+                                        </small>
+                                        
+                                        <hr>
 
-                                    <p>
-                                        許禕芳教授 (臺灣師範大學教育心理與輔導學系)
-                                    </p>
-                                    <small>
-                                        2016.10.19
-                                    </small>
-                                    
-                                    <hr>
+                                    </div>
 
-                                    <p>
-                                        本學期12月1日開始開放學程申請,12月31日截止
-                                    </p>
-                                    <small>
-                                        2016.10.17
-                                    </small>
+                                     <div class="col-sm-12"><a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                                     
-                                    <hr>
-
-                                   
-                                    <a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                                    
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -163,56 +128,20 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5">
                                     
-                                    <p>
-                                        台灣大學明治大學神經生物與認知科學研究交流會議
-                                    </p>
-                                    <small>
-                                        2016.11.09
-                                    </small>
-                                    
-                                    <hr>
-                                    <p>
-                                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                                    </p>
-                                    <small>
-                                        2016.10.27
-                                    </small>
-                                    
-                                    <hr>
-                                    <p>
-                                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                                    </p>
-                                    <small>
-                                        2016.10.19
-                                    </small>
-                                    
-                                    <hr>
-
-                                    <p>
-                                        許禕芳教授 (臺灣師範大學教育心理與輔導學系)
-                                    </p>
-                                    <small>
-                                        2016.10.19
-                                    </small>
-                                    
-                                    <hr>
-
-                                    <p>
-                                        本學期12月1日開始開放學程申請,12月31日截止
-                                    </p>
-                                    <small>
-                                        2016.10.17
-                                    </small>
-                                    
-                                    <hr>
-
+                                        <p>
+                                            {{New.titleZH_TW}}
+                                        </p>
+                                        <small>
+                                            {{New.date}}
+                                        </small>
+                                        
+                                        <hr>
+                                    </div>
                                    
-                                    <a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a>
-
+                                    <div class="col-sm-12"><a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                                     
-                                </div>
                                 </div>
                             </div>
                         </div>
