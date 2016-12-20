@@ -45,7 +45,7 @@ app
 				function(data) {
 
 					$scope.course_rules = data.data.pagedata;
-					console.log(data);
+
 				},
 				function(err) {
 

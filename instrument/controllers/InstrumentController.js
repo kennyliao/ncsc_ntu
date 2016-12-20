@@ -14,8 +14,7 @@ app
 				function(data) {
 
 					$scope.instrument = data.data.pagedata;
-					
-					
+
 				},
 				function(err) {
 

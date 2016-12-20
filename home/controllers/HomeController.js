@@ -13,6 +13,7 @@ app
 	     var url_address_hero = 'geJSONt/data.php?page=home_hero';
 			$http.get(url_address).then(
 
+
 				function(data) {
 
 					$scope.news = data.data.pagedata;
