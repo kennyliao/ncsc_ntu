@@ -8,6 +8,21 @@ app
 	     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 		
 
+		//最新消息
+	     var url_address = '../geJSONt/data.php?page=news';
+
+			$http.get(url_address).then(
+
+				function(data) {
+
+					$scope.news = data.data.pagedata;
+					
+				},
+				function(err) {
+
+					console.log(err);
+
+				});
 
 		
 
