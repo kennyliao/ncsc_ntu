@@ -238,50 +238,13 @@
                     <div role="tabpanel" class="tab-pane fade" id="application" aria-labelledBy="application-tab">
                         <div class="container">
              <br>
-  <table class="table table-hover">
+  <table class="table table-hover" ng-repeat="Instrument in instrument">
    
     <tbody>
       <tr>
-        <td><p>動物正子圖核心實驗使用規章</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>      
-      </tr>
-      
-     <tr>
-        <td><p>動物用核磁共振儀核心實驗室申請表</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>
-       
-      </tr>
-      <tr>
-        <td><p>動物正子圖核心實驗使用規章</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>      
-      </tr>
-      
-     <tr>
-        <td><p>動物用核磁共振儀核心實驗室申請表</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>
-       
-      </tr>
-      <tr>
-        <td><p>動物正子圖核心實驗使用規章</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>      
-      </tr>
-      
-     <tr>
-        <td><p>動物用核磁共振儀核心實驗室申請表</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>
-       
-      </tr>
-      <tr>
-        <td><p>動物正子圖核心實驗使用規章</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>      
-      </tr>
-      
-     <tr>
-        <td><p>動物用核磁共振儀核心實驗室申請表</p></td>
-        <td><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>
-       
-      </tr>
-       
+        <td class="col-md-8"><p>{{Instrument.title}}</p></td>
+        <td class="col-md-4"><p><i class="fa fa-download" aria-hidden="true">下載檔案</i></p></td>      
+      </tr>      
     </tbody>
   </table>
 </div>

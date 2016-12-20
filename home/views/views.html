@@ -78,63 +78,22 @@
         <br>
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <div class="col-sm-12">
+                <div class="col-sm-12" ng-repeat="New in news|limitTo:5">
                     <p class="col-sm-10">
-                        台灣大學明治大學神經生物與認知科學研究交流會議
+                        {{New.contentZH_TW}}
                     </p>
                     <p class="col-sm-2 text-muted">
                         演講
                     </p>
                     <small>
-                                        2016.11.09
-                                    </small>
+                        {{New.date}}
+                    </small>
                     <hr>
-                    <p class="col-sm-10">
-                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        研討會
-                    </p>
-                    <small>
-                                        2016.10.27
-                                    </small>
-                    <hr>
-                    <p class="col-sm-10">
-                        羅志鴻博士:紅斑性狼瘡治療的研發與核准歷程
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        學分學程
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        研討會
-                    </p>
-                    <small>
-                                        2016.10.19
-                                    </small>
-                    <hr>
-                    <p class="col-sm-10">
-                        許禕芳教授 (臺灣師範大學教育心理與輔導學系)
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        學分學程
-                    </p>
-                    <small>
-                                        2016.10.19
-                                    </small>
-                    <hr>
-                    <p class="col-sm-10">
-                        本學期12月1日開始開放學程申請,12月31日截止
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        演講
-                    </p>
-                    <small>
-                                        2016.10.17
-                                    </small>
-                    <hr>
-                    <a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    
+                    
                 </div>
-            </div>
+                <a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a>
+                
         </div>
     </div>
 </section>

@@ -48,7 +48,7 @@
                             <div class="row">
                             
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12"    ng-repeat="New in news">                                    
+                                    <div class="col-sm-12"    ng-repeat="New in news|limitTo:5">                                    
                                         <p>
                                             {{New.contentZH_TW}}
                                         </p>
