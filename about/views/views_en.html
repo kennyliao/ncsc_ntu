@@ -1,124 +1,100 @@
+<!-- Contact Section -->
 
-<section class="cta">    
-    <div class="cta-content">
-        <div class="container">
-            <div class="row col-sm-12"> 
-                <div class="col-sm-8">
-                <div class="navbar-header logo">                
-                        <a href="#home_en" >
-                            <img src="img/pic/ncsc_logo_white.png" alt="">
-                        </a>
-                </div>
-
-                </div>
-                <div class="col-sm-4">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav-justified">
-                        <li>
-                            <a class="text_white pull-right" href="index.html#/home"><h4>中文</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white pull-right" href="index_en.html#/home_en"><h4>English</h4></a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                </div>
-            </div>
-           <br /><br /><br /><br />
-            <div class="row col-sm-12 pic">
-                <div class="col-sm-6" ng-model="hero">
-                    <img class="img-responsive " src="{{hero[0].fileLink}}" alt="">
-                    <br>
-                    <img class="img-responsive " src="{{hero[1].fileLink}}" alt="">
-                </div>
-                <div id="home_hidden" class="col-sm-4">
-                    <img class="img-responsive center-block" src="{{hero[2].fileLink}}" alt="">
-                        <br>
-                        <img class="img-responsive center-block" src="{{hero[3].fileLink}}" alt="">
-                </div>
-                <div class="col-sm-2" id="home_hidden">
-                    <div class="row col-sm-12">
-                        <div class="col-sm-1"></div>
-                        <div class="col-sm-5 layer_title "></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#news_en"><h4>news</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#about_en"><h4>about us</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#instrument_en"><h4>Laboratory Equipment</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#members_en"><h4>members</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#credit_en"><h4>credit courses</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#links_en"><h4>related links</h4></a></div>
-                    </div>
-                    
-                </div>
-            
-            <!-- <div class="col-sm-12 text-center text_white">
-                <h3>關於大腦認知</h3>
-            </div> -->
-
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <!-- <img src="img/pic/transferexam.jpg" > -->
         </div>
     </div>
-    
-</section>
-<section>
+</div>
+<section class="content">
+<div class="aboutimg" style="background-image: url(img/pic/about.png);"></div>
     <div class="container">
-        <br>
-        <br>
         <div class="row">
-            <div class="col-sm-12 text-center">
-                <div class="col-sm-4">
-                </div>
-                <div class="col-sm-4">
-                    <h2>News</h2>
-                </div>
-                <div class="col-sm-4">
-                </div>
+            
+            <div class="col-lg-12 text-center">
+                <h2 class="aboutTitle">Introduction</h2>
+                <hr>
             </div>
         </div>
-        <br>
-        <br>
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <div class="col-sm-12" ng-repeat="New in news|limitTo:5">
-                    <p class="col-sm-10">
-                        <a href="#/news/{{New.newsNo}}/news_form_en">{{New.titleEN}}</a>
-                    </p>
-                    <p class="col-sm-2 text-muted">
-                        {{New.nameEN}}
-                    </p>
-                    <small>
-                        {{New.date}}
-                    </small>
-                    <hr>
-                    
-                    
-                </div>
-                <div class="col-sm-12"><a class="btn btn-primary" href="#/news_en">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
-                
+                <p>Research interest on how the human mind works has a long history, but the relation between mind and brain has remained an attractive but unresolved issue. Modern advances in neuroscience and cognitive science have since the end of the last century broadened and deepened – from genes, molecules, nerve cells, brain systems, explicit behavior, even to implicit mental processes – our understanding on how information is represented and processed in human brain. For instance, new technologies detecting human brain activities make it possible for brain and mind researchers to investigate human cognition as well as emotion and volition, exploring topics on high-level brain functions such as personality, belief, esthetics, morality, self, and consciousness. Studies devoted along the line have thus enhanced our knowledge of how human mind works under normal and ill-functioning states, so as to develop new measures for detecting, diagnosing and treating mental illnesses. Against this background, the NTU Neurobiology and Cognitive Science Center (NCSC) was founded in October, 2005, aiming to bring together devoted NTU scholars for cutting-edge research and education on neuroscience and cognitive science, in hope to shed light on this very “last frontier for human being” (a term taken from Francis Crick, the Nobel Laureate).</p>
+            </div>
         </div>
+        
     </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Organization</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <img src="img/pic/Architecture.JPG" class="img-responsive center-block" alt="">
+            </div>
+        </div>
 </section>
 <section>
     <div class="container">
-        <br>
-        <br>
         <div class="row">
-            <div class="col-sm-12 text-center">
-                <div class="col-sm-2">
-                </div>
-                <div class="col-sm-8">
-                    <h2>Our Members</h2>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-primary" href="#/members_en">MORE <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
+            <div class="col-lg-12 text-center">
+                <h2>Our Staff</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <img class="img-circle img-responsive center-block" src="http://placehold.it/200x200" alt="">
+                <h3>Mary Wang
+                    
+                </h3>
+                <small>Job Title</small>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-circle img-responsive center-block" src="http://placehold.it/200x200" alt="">
+                <h3>Mary Wang
+                    
+                </h3>
+                <small>Job Title</small>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-circle img-responsive center-block" src="http://placehold.it/200x200" alt="">
+                <h3>Mary Wang
+                    
+                </h3>
+                <small>Job Title</small>
             </div>
         </div>
         <br>
-        <br>
         <div class="row">
-            <img src="img/ours.png" class="img-responsive center-block" alt="">
+            <div class="col-sm-4 text-center">
+                <img class="img-circle img-responsive center-block" src="http://placehold.it/200x200" alt="">
+                <h3>Mary Wang
+                    
+                </h3>
+                <small>Job Title</small>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-circle img-responsive center-block" src="http://placehold.it/200x200" alt="">
+                <h3>Mary Wang
+                    
+                </h3>
+                <small>Job Title</small>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img class="img-circle img-responsive center-block" src="http://placehold.it/200x200" alt="">
+                <h3>Mary Wang
+                    
+                </h3>
+                <small>Job Title</small>
+            </div>
         </div>
-    </div>
 </section>
 <section>
     <div class="container">

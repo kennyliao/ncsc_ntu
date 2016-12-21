@@ -15,10 +15,10 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav-justified">
                         <li>
-                            <a class="text_white pull-right" href="/NCSC_NTU/"><h4>中文</h4></a>
+                            <a class="text_white pull-right" href="index.html#/home"><h4>中文</h4></a>
                         </li>
                         <li>
-                            <a class="text_white pull-right" href="index_en.html#/home_en"><h4>英文</h4></a>
+                            <a class="text_white pull-right" href="index_en.html#/home_en"><h4>English</h4></a>
                         </li>
                         
                     </ul>
@@ -42,18 +42,18 @@
                         <div class="col-sm-1"></div>
                         <div class="col-sm-5 layer_title "></div>
                         <div class="col-sm-5 layer_title "><a  class="text_white" href="#news"><h4>最新消息</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#about"><h4>關於</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#instrument"><h4>實驗室</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#members"><h4>成員</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#about"><h4>關於我們</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#instrument"><h4>核心儀器</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#members"><h4>中心成員</h4></a></div>
                         <div class="col-sm-5 layer_title "><a  class="text_white" href="#credit"><h4>學分學程</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#download"><h4>相關連結</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a  class="text_white" href="#links"><h4>相關連結</h4></a></div>
                     </div>
                     
                 </div>
             
-            <div class="col-sm-12 text-center text_white">
-                <h3>關於大腦認知--></h3>
-            </div>
+            <!-- <div class="col-sm-12 text-center text_white">
+                <h3>關於大腦認知</h3>
+            </div> -->
 
         </div>
     </div>
@@ -81,7 +81,7 @@
                 <div class="col-sm-12" ng-repeat="New in news|limitTo:5">
                     <p class="col-sm-10">
                         <a href="#/news/{{New.newsNo}}/news_form"> {{New.titleZH_TW}}</a>
-                    </p>x
+                    </p>
                     <p class="col-sm-2 text-muted">
                         {{New.nameZH_TW}}
                     </p>
@@ -92,7 +92,7 @@
                     
                     
                 </div>
-                <div class="col-sm-12"><a class="btn btn-primary" href="/NCSC_NTU/#/news">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                <div class="col-sm-12"><a class="btn btn-primary" href="#/news">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                 
         </div>
     </div>
@@ -109,7 +109,7 @@
                     <h2>我們的成員</h2>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn btn-primary" href="#/members">更多 <span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
         </div>
@@ -129,16 +129,53 @@
                 <div class="col-sm-2">
                 </div>
                 <div class="col-sm-8">
-                    <h2>地圖</h2>
+                    <h2>我們的位置</h2>
                 </div>
                 <div class="col-sm-2">
                 </div>
             </div>
         </div>
         <br>
-        <br>
         <div class="row">
-            <img src="img/pic/map.JPG" class="img-responsive center-block" alt="">
+
+            <div id="myTabContent" class="tab-content ">
+                <!-- <div role="tabpanel" class="tab-pane fade in active" id="Introduction" aria-labelledBy="Introduction-tab"> -->
+                <div role="tabpanel" class="tab-pane fade in active" id="pos1" aria-labelledBy="pos1-tab">
+                    <div class="container">
+                        <div class="row maps">
+                            <a href="https://www.google.com.tw/maps/place/%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8%E5%BF%83%E7%90%86%E5%AD%B8%E7%B3%BB%E5%8D%97%E9%A4%A8/@25.0195287,121.5410665,18.09z/data=!4m12!1m6!3m5!1s0x3442aa264a212e37:0xd6bbf7ae8dd69eb1!2z5b-D55CG57O75YyX6aSo!8m2!3d25.0200417!4d121.5402373!3m4!1s0x0:0xd58d29d53e67fa4c!8m2!3d25.0195594!4d121.5402447" target="_blank"><img src="img/pic/map1.jpg" class="img-responsive center-block" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="pos2" aria-labelledBy="pos2-tab">
+                    <div class="container">
+                        <div class="row maps">
+                            <a href="https://www.google.com.tw/maps/place/%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8%E5%BF%83%E7%90%86%E5%AD%B8%E7%B3%BB%E5%8D%97%E9%A4%A8/@25.0195287,121.5410665,18.09z/data=!4m12!1m6!3m5!1s0x3442aa264a212e37:0xd6bbf7ae8dd69eb1!2z5b-D55CG57O75YyX6aSo!8m2!3d25.0200417!4d121.5402373!3m4!1s0x0:0xd58d29d53e67fa4c!8m2!3d25.0195594!4d121.5402447" target="_blank"><img src="img/pic/map2.jpg" class="img-responsive center-block" alt=""></a>
+                        </div>
+                    </div>
+                </div> 
+                <div role="tabpanel" class="tab-pane fade" id="pos3" aria-labelledBy="pos3-tab">
+                    <div class="container">
+                        <div class="row maps">
+                            <a href="https://www.google.com.tw/maps/place/%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8%E5%BF%83%E7%90%86%E5%AD%B8%E7%B3%BB%E5%8D%97%E9%A4%A8/@25.0195287,121.5410665,18.09z/data=!4m12!1m6!3m5!1s0x3442aa264a212e37:0xd6bbf7ae8dd69eb1!2z5b-D55CG57O75YyX6aSo!8m2!3d25.0200417!4d121.5402373!3m4!1s0x0:0xd58d29d53e67fa4c!8m2!3d25.0195594!4d121.5402447" target="_blank"><img src="img/pic/map3.jpg" class="img-responsive center-block" alt=""></a>
+                        </div>
+                    </div>
+                </div> 
+                <div role="tabpanel" class="tab-pane fade" id="pos4" aria-labelledBy="pos4-tab">
+                    <div class="container">
+                        <div class="row maps">
+                            <a href="https://www.google.com.tw/maps/place/%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8%E5%BF%83%E7%90%86%E5%AD%B8%E7%B3%BB%E5%8D%97%E9%A4%A8/@25.0195287,121.5410665,18.09z/data=!4m12!1m6!3m5!1s0x3442aa264a212e37:0xd6bbf7ae8dd69eb1!2z5b-D55CG57O75YyX6aSo!8m2!3d25.0200417!4d121.5402373!3m4!1s0x0:0xd58d29d53e67fa4c!8m2!3d25.0195594!4d121.5402447" target="_blank"><img src="img/pic/map4.jpg" class="img-responsive center-block" alt=""></a>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <div class="bs-example bs-example-tabs" role="tabpanel">
+                <ul id="myTab" class="nav nav-pills nav-justified " role="tablist">
+                    <li class="active"><a href="home#pos1" id="pos1-tab" role="tab" data-toggle="tab" aria-controls="pos1" aria-expanded="true"><h4 class="text_black">中心辦公室</h4></a></li>
+                    <li> <a href="home#pos2" role="tab" id="pos2-tab" data-toggle="tab" aria-controls="pos2"><h4 class="text_black">實驗室A</h4></a></li>
+                    <li><a href="home#pos3" role="tab" id="pos3-tab" data-toggle="tab" aria-controls="pos3"><h4 class="text_black">實驗室B</h4></a></li>
+                    <li><a href="home#pos4" role="tab" id="pos4-tab" data-toggle="tab" aria-controls="pos4"><h4 class="text_black">實驗室C</h4></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
 </section>
