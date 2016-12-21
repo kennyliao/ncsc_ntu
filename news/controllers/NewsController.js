@@ -23,6 +23,29 @@ app
 					console.log(err);
 
 				});
+
+			$scope.year = function (value) {
+
+			    var url_address = 'geJSONt/data_years.php?page=news&id='+value;
+
+				$http.get(url_address).then(
+
+					function(data) {
+						
+						$scope.news = data.data.pagedata;
+					
+					},
+					function(err) {
+
+						console.log(err);
+
+					});
+
+			};
+
+			$scope.totalItems = 64;
+  			$scope.currentPage = 1;
+
     })
 
     .controller('NewsFormController',function($scope,$http,$filter,toastr,$base64,$rootScope,$location,$stateParams) {

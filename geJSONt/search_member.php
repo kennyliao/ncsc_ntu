@@ -9,8 +9,8 @@
           $products = $pdo->prepare( $sql );
         }
         else{
-            $page = "`members`";
-            $sql = "SELECT * FROM `members` where memberNo=".$_REQUEST['id'];
+            $page = "`members`";           
+            $sql = "SELECT * FROM `members` where nameZH_TW like '%".$_REQUEST['id']."%' OR nameEN like '%".$_REQUEST['id']."%'";
             $products = $pdo->prepare( $sql );
           }        
       }else{
@@ -21,19 +21,19 @@
       $products->execute();
       $emparray = array();
      while($row=$products->fetch(PDO::FETCH_ASSOC)){
-     	$emparray[] = $row;
+      $emparray[] = $row;
      }
   //印出json格式
-		// echo json_encode($emparray);
-     	echo '{"pagedata":'.json_encode($emparray).'}';
+    // echo json_encode($emparray);
+      echo '{"pagedata":'.json_encode($emparray).'}';
 
-	//生成json檔
-	    // $fp = fopen('empdata.json', 'w');
-	    // fwrite($fp, json_encode($emparray));
-	    // fclose($fp);
+  //生成json檔
+      // $fp = fopen('empdata.json', 'w');
+      // fwrite($fp, json_encode($emparray));
+      // fclose($fp);
 
-	}catch(PDOException $e){
-			echo "行號: ", $e->getLine();
-			echo "錯誤訊息: ", $e->getMessage();
+  }catch(PDOException $e){
+      echo "行號: ", $e->getLine();
+      echo "錯誤訊息: ", $e->getMessage();
         }
 ?>

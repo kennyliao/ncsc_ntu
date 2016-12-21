@@ -13,11 +13,11 @@
        
                 <div>
                     <div class="btn-group btn-group-justified">
-                    <a href="#news" class="btn btn-default">2016</a>
-                    <a href="#news" class="btn btn-default">2015</a>
-                    <a href="#news" class="btn btn-default">2014</a>
-                    <a href="#news" class="btn btn-default">2013</a>
-                    <a href="#news" class="btn btn-default">2012</a>
+                    <a href="#news" class="btn btn-default" ng-click="year(2016)">2016</a>
+                    <a href="#news" class="btn btn-default" ng-click="year(2015)">2015</a>
+                    <a href="#news" class="btn btn-default" ng-click="year(2014)">2014</a>
+                    <a href="#news" class="btn btn-default" ng-click="year(2013)">2013</a>
+                    <a href="#news" class="btn btn-default" ng-click="year(2012)">2012</a>
                 </div>
 
                
@@ -61,6 +61,8 @@
                                     </div>
                                     <div class="col-sm-12"><a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a> </div>
                                     
+                                    <!--  <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
+                                    <pre>The selected page no: {{currentPage}}</pre>   -->                              
                                 </div>
                             </div>
                         </div>

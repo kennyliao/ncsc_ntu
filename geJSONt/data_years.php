@@ -2,16 +2,17 @@
     try{
       require_once("connect_DB.php");
       $pageData = $_REQUEST['page'];
-      if($pageData=='course_type'){
-        
-          $page = "`course_type`";
-          $sql = "SELECT ct.nameZH_TW,cr.courseNameZH_TW,cr.courseType
-                  FROM `course_type` as ct
-                  left JOIN `course_rules` as cr
-                  ON ct.typeNo=cr.courseType";
-
+      if($pageData=='news'){
+        if($_REQUEST['id']==NULL){
+          $page = "`news`";
+          $sql = "SELECT * FROM ".$page;
           $products = $pdo->prepare( $sql );
-                 
+        }
+        else{
+            $page = "`news`";
+            $sql = "SELECT * FROM `news` where createdDate like '%".$_REQUEST['id']."%'";
+            $products = $pdo->prepare( $sql );
+          }        
       }else{
         echo 'error';
       }

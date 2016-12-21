@@ -37,6 +37,27 @@ app
 				  return newArr;
 				};
 
+				$scope.searchdataone = function() {
+
+		           
+		            var value=$scope.tchName;
+		            var url_address_secrchmember = 'geJSONt/search_member.php?page=members&id='+value;
+
+					$http.get(url_address_secrchmember).then(
+
+						function(data) {
+							
+							$scope.members = data.data.pagedata;
+							$scope.chunkedData = chunk($scope.members, 4);
+						},
+						function(err) {
+
+							console.log(err);
+
+						});
+		            
+		          
+		        }
 		
 
     })
@@ -48,7 +69,7 @@ app
 	   			
 	   			// alert(JSON.stringify($stateParams));
                 var value=$stateParams.id;           
-                var url_address = '../geJSONt/data_members.php?page=members&id='+value;
+                var url_address = 'geJSONt/data_members.php?page=members&id='+value;
               
                 $http.get(url_address).then(
 
@@ -63,10 +84,6 @@ app
 					console.log(err);
 
 				});
-
-           
-
-
 	   
 	    
     })
