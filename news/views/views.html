@@ -6,7 +6,7 @@
                     <li class="active"><a href="download#Speech" id="Speech-tab" role="tab" data-toggle="tab" aria-controls="Speech" aria-expanded="true"><h4 class="text_black">演講</h4></a></li>
                     <li> <a href="download#seminar" role="tab" id="seminar-tab" data-toggle="tab" aria-controls="seminar"><h4 class="text_black">研討會</h4></a></li>
                     <li><a href="download#credit" role="tab" id="credit-tab" data-toggle="tab" aria-controls="credit" ><h4 class="text_black">學分學程</h4></a></li>
-
+                    <li><a href="download#awards" role="tab" id="awards-tab" data-toggle="tab" aria-controls="awards" ><h4 class="text_black">得獎紀錄</h4></a></li>
                 </ul>
                 <br>
         <div class="row">
@@ -150,6 +150,47 @@
                         
                     </div>
                     <!-- 學分學程 END-->
+                    <!-- Awards-->
+                    <div role="tabpanel" class="tab-pane fade" id="awards" aria-labelledBy="awards-tab">
+                        <div class="container">
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <div class="col-sm-4">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h3>得獎紀錄</h3>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-10 col-lg-offset-1">
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'4'}:true|limitTo:5">
+                                    
+                                        <p>
+                                            <a href="#/news/{{New.newsNo}}/news_form">{{New.titleZH_TW}}</a>
+                                        </p>
+                                        <small>
+                                            {{New.date}}
+                                        </small>
+                                        
+                                        <hr>
+                                    </div>
+                                   
+                                    <div class="col-sm-12"><a class="btn btn-primary" href="#">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Awards END-->
                     
                 </div>
             </div>
