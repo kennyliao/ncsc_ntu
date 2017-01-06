@@ -35,12 +35,22 @@
     <script type="text/javascript" src="links/controllers/DownloadController.js"></script>
     <script type="text/javascript" src="IndexController.js"></script>
     <script type="text/javascript" src="home/controllers/HomeController.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+    <style>
+        .active1 {
+            background: #e6e6e6;
+            color: #db717e;
+        }
+        
+        .active2 {
+            color: red;
+        }
+        
+        .inactive2 {
+            color: blue;
+        }
+    </style>
 </head>
 
 <body id="page-top" class="index">
@@ -56,7 +66,7 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-justified">
+                    <ul class="nav nav-pills nav-justified custom clickme">
                         <li>
                             <a class="text_white" href="#news_en"><h4>news</h4></a>
                         </li>
@@ -79,7 +89,6 @@
                 </div>
             </div>
         </div>
-        <!-- <span id="to-top" href="#page-top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></span> -->
     </div>
     <div class="row navbar-fixed-top navbar-custom" ng-if="!homepage">
         <div class="container">
@@ -93,24 +102,24 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-justified">
+                    <ul class="nav nav-pills nav-justified custom clickme">
                         <li>
-                            <a class="text_white" href="#news_en"><h4>news</h4></a>
+                            <a class="text_white" href="#news_en" ng-class="{'active1':  $location.path() == '/news_en'|| $location.path() == '/news/news_en_more' || newsisActive==true}"><h4>news</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#about_en"><h4>about us</h4></a>
+                            <a class="text_white" href="#about_en" ng-class="{'active1':  $location.path() == '/about_en' || $location.path() == '/about/about_form_en'}"><h4>about us</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#instrument_en"><h4>Laboratory Equipment</h4></a>
+                            <a class="text_white" href="#instrument_en" ng-class="{'active1':  $location.path() == '/instrument_en'}"><h4>Laboratory Equipment</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#members_en"><h4>members</h4></a>
+                            <a class="text_white" href="#members_en" ng-class="{'active1':  $location.path() == '/members_en' || membersisActive==true}"><h4>members</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#credit_en"><h4>credit courses</h4></a>
+                            <a class="text_white" href="#credit_en" ng-class="{'active1':  $location.path() == '/credit_en'}"><h4>credit courses</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#links_en"><h4>related links</h4></a>
+                            <a class="text_white" href="#links_en" ng-class="{'active1':  $location.path() == '/links_en'}"><h4>related links</h4></a>
                         </li>
                     </ul>
                 </div>
@@ -141,7 +150,7 @@
                                 <i class="fa fa-fw fa-envelope"></i>
                             </li>
                             <li>
-                                ntuncsc@ntu.edu.tw
+                                <a class="text_white" href="mailto:ntuncsc@ntu.edu.tw">ntuncsc@ntu.edu.tw</a>
                             </li>
                         </ul>
                         <ul class="list-inline">
@@ -149,7 +158,7 @@
                                 <i class="fa fa-fw fa-map-marker"></i>
                             </li>
                             <li>
-                                Dept. of Psychology (South Hall),   No.1, Section 4, Roosevelt Road, Da’an District, Taipei City, 10617
+                                Dept. of Psychology (South Hall), No.1, Section 4, Roosevelt Road, Da’an District, Taipei City, 10617
                             </li>
                         </ul>
                     </div>
@@ -179,30 +188,27 @@
     <script>
     var fixed = false;
     $(document).scroll(function() {
-        wdth=$(window).width();
+        wdth = $(window).width();
         if ($(this).scrollTop() > 250) {
             if (!fixed) {
                 fixed = true;
                 $('#to-top').show();
                 $('#to-top').css(
-                    "position","fixed",
-                    "display","block");
-                
-                };
-            
+                    "position", "fixed",
+                    "display", "block");
+            };
+
         } else {
             if (fixed) {
 
-                if(wdth>767){
+                if (wdth > 767) {
                     fixed = false;
                     $('#to-top').hide();
                     $('#to-top').css(
-                    "position","fixed",
-                    "display","block");
-                
-                
+                        "position", "fixed",
+                        "display", "block");
                 }
-                
+
             }
         }
     });

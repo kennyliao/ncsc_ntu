@@ -3,14 +3,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
     
     $stateProvider
-        
-        // HOME STATES AND NESTED VIEWS ========================================
-        
 
         .state('home', {
-            // url: '/home',
-            // templateUrl: 'home.html',
-            // controller:  'IndexController'
             url: '/home',
             templateUrl: 'home/views/views.html',
             controller:  'HomeController'
@@ -30,6 +24,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
            controller:  'AboutController'
             
         })
+
+        .state('about_form', {
+           url: '/about/about_form',
+           templateUrl: 'about/views/form.html',
+           controller:  'AboutController'
+            
+        })
+
+        .state('about_form_en', {
+           url: '/about/about_form_en',
+           templateUrl: 'about/views/form_en.html',
+           controller:  'AboutController'
+            
+        })
+
         .state('about_en', {
             url: '/about_en',
            templateUrl: 'about/views/views_en.html',
@@ -53,6 +62,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/news_new',
            templateUrl: 'news/views/view_new.html',
            controller:  'NewsController'
+            
+        })
+        .state('news_more', {
+            url: '/news/:id/news_more',
+            templateUrl:'news/views/more.html',
+            controller: 'NewsMoreController'
+        })
+        .state('news_en_more', {
+            url: '/news/:id/news_en_more',
+           templateUrl: 'news/views/more_en.html',
+           controller:  'NewsMoreController'
             
         })
         .state('news_form', {

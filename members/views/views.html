@@ -1,41 +1,28 @@
-<!-- Contact Section -->
-
 <section class="content">
     <div class="container">
-    
-    
-    <div class="row">
-        <div class="col-md-9"> </div>
-        <div class="col-md-3">
-            
-            <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" placeholder="姓名" ng-model="tchName"/>
-                    
-                    <span class="input-group-btn">
+        <div class="row">
+            <div class="col-md-9"> </div>
+            <div class="col-md-3">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control input-lg" placeholder="姓名" ng-model="tchName" />
+                        <span class="input-group-btn">
                         <button class="btn btn-default btn-lg" type="button">
                             <i class="glyphicon glyphicon-search" ng-click="searchdataone()"></i>
                         </button>
                     </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div><br>
-    
-        <div class="row"  ng-repeat="Member in chunkedData">
+        <br>
+        <div class="row" ng-repeat="Member in chunkedData">
             <br>
             <div class="col-sm-3 text-center" ng-repeat="Members in Member">
-                
-                <a href="#/members/{{Members.memberNo}}/members_form"><img class="img-circle img-responsive center-block" src="http://placehold.it/200x200" alt=""></a>
-                <h3>{{Members.nameZH_TW}}
-                   
-                </h3>
+                <a href="#/members/{{Members.memberNo}}/members_form"><img class="img-circle img-responsive center-block" ng-src="{{Members.avatar}}" alt=""></a>
+                <h3>{{Members.nameZH_TW}}</h3>
                 <small>{{Members.nameEN}}</small>
-
             </div>
-            
         </div>
-
-        
+    </div>
 </section>
-

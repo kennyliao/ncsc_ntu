@@ -2,41 +2,42 @@ var app = angular.module('app');
 
 app
 
-    .controller('HomeController',function($scope,$http,$filter,toastr,$base64,$rootScope) {
-		
-		 var valueToPass = "1";
-	     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
-		
+    .controller('HomeController', function($scope, $http, $filter, toastr, $base64, $rootScope) {
 
-		//最新消息
-	     var url_address = 'geJSONt/data.php?page=home_news';
-	     var url_address_hero = 'geJSONt/data.php?page=home_hero';
-			$http.get(url_address).then(
+    	var valueToPass = "1";
+    	$rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 
-				function(data) {
+	    //最新消息
+	    var url_address = 'geJSONt/data.php?page=home_news';
+	    var url_address_hero = 'geJSONt/data.php?page=home_hero';
+	    $http.get(url_address).then(
 
-					$scope.news = data.data.pagedata;
+
+	        function(data) {
+
+	            $scope.news = data.data.pagedata;
 
 
-				},
-				function(err) {
+	        },
+	        function(err) {
 
-					console.log(err);
+	            console.log(err);
 
-				});
+	        });
 
-		$http.get(url_address_hero).then(
 
-				function(data) {
+	    $http.get(url_address_hero).then(
 
-					$scope.hero = data.data.pagedata;
-					console.log(data);
-				},
-				function(err) {
+	        function(data) {
 
-					console.log(err);
+	            $scope.hero = data.data.pagedata;
+	            //console.log(data);
+	        },
+	        function(err) {
 
-				});
+	            console.log(err);
 
-    });
+	        });
+
+});

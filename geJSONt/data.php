@@ -19,6 +19,9 @@
       }else if($pageData=='home_hero'){
         $page = "`home_pictures`";
       }
+      else if($pageData=='news_type'){
+        $page = "`news` where newsType='".$_REQUEST['id']."'";
+      }
       else{
         echo 'error';
       }

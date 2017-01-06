@@ -1,90 +1,25 @@
-<!-- <section class="section_member_form">
-                
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item ">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                   
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    <a href="#"><img src="http://placehold.it/200x200" alt="Image" class="img-thumbnail img-circle img-responsive center-block"></a>
-                                </div>
-                                <div class="col-sm-2">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <a class="left carousel-control" href="#members_form#myCarousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                    <a class="right carousel-control" href="#members_form#myCarousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                </div>
-            
-        
-   
-</section> -->
 <section class="content">
     <div class="container" ng-repeat="MembersData in model">
         <br>
         <div class="row">
             <div class="col-sm-4 text-center">
-                <img class="img-circle img-responsive center-block" src="http://placehold.it/300x300" alt="">
+                <img class="img-circle img-responsive center-block" ng-src="{{MembersData.avatar}}" alt="">
             </div>
-            
             <div class="col-sm-8">
-
-            <dl class="dl-horizontal h3">
-              <dt><i class="fa fa-user"></i></dt>
-              <dd>{{MembersData.nameEN}}</dd>
-              <dt></dt>
-              <dd>{{MembersData.jobTitleEN}}</dd>
-              <dt></dt>
-              <!-- <dd>{{MembersData.nameEN}}</dd><br> -->
-              <dt><i class="fa fa-phone"></i></dt>
-              <dd>Office: {{MembersData.phone1}}</dd>
-              <dt></dt>
-              <dd>Lab: {{MembersData.phone2}}</dd><br>
-              <dt><i class="fa fa-envelope"></i></dt>
-              <dd>{{MembersData.email}}</dd>
-            </dl>
-
-                            
+                <dl class="dl-horizontal h3">
+                    <dt><i class="fa fa-user"></i></dt>
+                    <dd>{{MembersData.nameEN}}</dd>
+                    <dt></dt>
+                    <dd>{{MembersData.jobTitleEN}}</dd>
+                    <dt></dt>
+                    <dt><i class="fa fa-phone"></i></dt>
+                    <dd>Office: {{MembersData.phone1}}</dd>
+                    <dt></dt>
+                    <dd>Lab: {{MembersData.phone2}}</dd>
+                    <br>
+                    <dt><i class="fa fa-envelope"></i></dt>
+                    <dd>{{MembersData.email}}</dd>
+                </dl>
             </div>
         </div>
         <hr>
@@ -100,10 +35,15 @@
         <hr>
         <div class="row">
             <div class="col-lg-12">
-                 <h1>
+                <h1>
                     <small>Recent Representative Publication (* corresponding author)</small>
                 </h1>
                 <div>{{MembersData.publications}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-md-offset-11">
+                <a class="btn btn-primary" href="#/members  "><span class="glyphicon glyphicon-chevron-left"></span>BACK</a>
             </div>
         </div>
     </div>

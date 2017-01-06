@@ -35,12 +35,22 @@
     <script type="text/javascript" src="links/controllers/DownloadController.js"></script>
     <script type="text/javascript" src="IndexController.js"></script>
     <script type="text/javascript" src="home/controllers/HomeController.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+    <style>
+        .active1 {
+            background: #e6e6e6;
+            color: #db717e;
+        }
+        
+        .active2 {
+            color: red;
+        }
+        
+        .inactive2 {
+            color: blue;
+        }
+    </style>
 </head>
 
 <body id="page-top" class="index">
@@ -56,7 +66,7 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-justified">
+                    <ul class="nav nav-pills nav-justified custom clickme">
                         <li>
                             <a class="text_white" href="#news"><h4>最新消息</h4></a>
                         </li>
@@ -79,7 +89,6 @@
                 </div>
             </div>
         </div>
-        <!-- <span id="to-top" href="#page-top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></span> -->
     </div>
     <div class="row navbar-fixed-top navbar-custom" ng-if="!homepage">
         <div class="container">
@@ -93,25 +102,24 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    
-                    <ul class="nav nav-justified">
+                    <ul class="nav nav-pills nav-justified custom clickme">
                         <li>
-                            <a class="text_white" href="#news"><h4>最新消息</h4></a>
+                            <a class="text_white" href="#news" ng-class="{'active1':  $location.path() == '/news'|| $location.path() == '/news/news_more' || newsisActive==true}"><h4>最新消息</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#about"><h4>關於我們</h4></a>
+                            <a class="text_white" href="#about" ng-class="{'active1':  $location.path() == '/about' || $location.path() == '/about/about_form'}"><h4>關於我們</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#instrument"><h4>核心儀器</h4></a>
+                            <a class="text_white" href="#instrument" ng-class="{'active1':  $location.path() == '/instrument'}"><h4>核心儀器</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#members"><h4>中心成員</h4></a>
+                            <a class="text_white" href="#members" ng-class="{'active1':  $location.path() == '/members' || membersisActive==true}"><h4>中心成員</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#credit"><h4>學分學程</h4></a>
+                            <a class="text_white" href="#credit" ng-class="{'active1':  $location.path() == '/credit'}"><h4>學分學程</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#links"><h4>相關連結</h4></a>
+                            <a class="text_white" href="#links" ng-class="{'active1':  $location.path() == '/links'}"><h4>相關連結</h4></a>
                         </li>
                     </ul>
                 </div>
@@ -142,7 +150,7 @@
                                 <i class="fa fa-fw fa-envelope"></i>
                             </li>
                             <li>
-                                ntuncsc@ntu.edu.tw
+                                <a class="text_white" href="mailto:ntuncsc@ntu.edu.tw">ntuncsc@ntu.edu.tw</a>
                             </li>
                         </ul>
                         <ul class="list-inline">
@@ -180,30 +188,27 @@
     <script>
     var fixed = false;
     $(document).scroll(function() {
-        wdth=$(window).width();
+        wdth = $(window).width();
         if ($(this).scrollTop() > 250) {
             if (!fixed) {
                 fixed = true;
                 $('#to-top').show();
                 $('#to-top').css(
-                    "position","fixed",
-                    "display","block");
-                
-                };
-            
+                    "position", "fixed",
+                    "display", "block");
+            };
+
         } else {
             if (fixed) {
 
-                if(wdth>767){
+                if (wdth > 767) {
                     fixed = false;
                     $('#to-top').hide();
                     $('#to-top').css(
-                    "position","fixed",
-                    "display","block");
-                
-                
+                        "position", "fixed",
+                        "display", "block");
+
                 }
-                
             }
         }
     });

@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Montserrat, "Microsoft Jhenghei","Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, "Microsoft Jhenghei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -101,64 +101,74 @@ header {
     text-align: center;
     /*background: #18BC9C;*/
     /*background: url("../img/pic/background.JPG");
-    background-size: cover;*/   
+    background-size: cover;*/
 }
 
-div#to-top div.navbar-header div.logo img,.navbar-fixed-top div.navbar-header div.logo img,section.cta div.logo img{
+div#to-top div.navbar-header div.logo img,
+.navbar-fixed-top div.navbar-header div.logo img,
+section.cta div.logo img {
     width: 150px;
     margin-right: 20px;
 }
-section.cta div.pic img{
+
+section.cta div.pic img {
     width: 80%;
 }
-section div.aboutimg{
+
+section div.aboutimg {
     width: 100%;
     height: 240px;
     margin-top: -91px;
-    background-size:cover;
+    background-size: cover;
 }
-section h2.aboutTitle{
+
+section h2.aboutTitle {
     height: 100px;
     margin-top: -50px;
     background-color: #fff;
     padding-top: 30px;
 }
-div.container div.aboutimg{
+
+div.container div.aboutimg {
     margin-top: -41px;
 }
-div.container div.aboutimg img{
+
+div.container div.aboutimg img {
     width: 100%;
 }
+
 .carousel-control {
-  padding-top:10%;
-  width:5%;
+    padding-top: 10%;
+    width: 5%;
 }
-.applybtn{
+
+.applybtn {
     margin: 20px 0;
 }
+
 .logo_left {
-	padding-top: 23px;  
+    padding-top: 23px;
     background: #141628;
     text-align: left;
     /*padding-left:26px;*/
 }
 
-.maps{
+.maps {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.layer{
 
-  font-family: PingFangTC;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: 1px;
-  color: #f8f8f8;
+.layer {
+    font-family: PingFangTC;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    color: #f8f8f8;
 }
 
-.layer_title{
+.layer_title {
     width: 200px;
     height: 80px;
     font-family: PingFangTC;
@@ -170,53 +180,50 @@ div.container div.aboutimg img{
     color: #f8f8f8;
 }
 
-.text_white{
-  
+.text_white {
     color: #f8f8f8;
 }
-.text_black{
-  
+
+.text_black {
     color: #000;
 }
 
-
 .logo_right {
-	padding-top: 60px;    
+    padding-top: 60px;
     background: #db717e;
     text-align: right;
     padding-bottom: 23px;
     /*padding-right:26px;*/
 }
 
-.logo img{
-	margin: auto;
+.logo img {
+    margin: auto;
 }
-.homepage_left
-{
+
+.homepage_left {
     padding-top: 60px;
     padding-bottom: 148px;
     background: #141628;
 }
-.homepage_right
-{
+
+.homepage_right {
     padding-top: 60px;
     padding-bottom: 148px;
     background: #db717e;
 }
 
-.homepage_left img{
-	margin: auto;
+.homepage_left img {
+    margin: auto;
 }
-.homepage_right img{
-	margin: auto;
+
+.homepage_right img {
+    margin: auto;
 }
 
 header .container {
     /*padding-top: 50px;*/
     /*padding-bottom: 50px*/
 }
-
-
 
 header img {
     display: block;
@@ -250,7 +257,7 @@ header .intro-text .skills {
 .navbar-custom {
     background: #2C3E50;
     /*background: url("../img/pic/background.JPG");*/
-    background-size: cover; 
+    background-size: cover;
     font-weight: 700;
     border: none
 }
@@ -258,22 +265,28 @@ header .intro-text .skills {
 .navbar-custom_new {
     background: none;
     /*background: url("../img/pic/background.JPG");*/
-    background-size: cover; 
+    background-size: cover;
     font-weight: 700;
     border: none
 }
 
+
 /* Icon when the collapsible content is shown */
-  .btn_new:after {
+
+.btn_new:after {
     font-family: "Glyphicons Halflings";
-    content:"\e253";
+    content: "\e253";
     float: right;
     margin-left: 15px;
-  }
-  /* Icon when the collapsible content is hidden */
-  .btn_new.collapsed:after {
-    content:"\e250";
 }
+
+
+/* Icon when the collapsible content is hidden */
+
+.btn_new.collapsed:after {
+    content: "\e250";
+}
+
 .navbar-custom a:focus {
     outline: 0
 }
@@ -314,26 +327,22 @@ header .intro-text .skills {
     border-color: #18BC9C
 }
 
-
 @media (min-width:768px) {
     .navbar-custom {
         /*background: none;*/
-        background:#2C3E50;
+        background: #2C3E50;
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s
     }
-
     .navbar-custom_new {
         background: none;
-       
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s
     }
-
     .navbar-custom .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
@@ -350,24 +359,21 @@ header .intro-text .skills {
 }
 
 section.cta {
-    padding: 60px ; 
-  position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-image: url('../img/pic/background.jpg');
-  
+    padding: 60px;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-image: url('../img/pic/background.jpg');
 }
-
-
 
 section.cta .cta-content {
- 
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
+
 @media (min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px
@@ -377,6 +383,7 @@ section.cta .cta-content {
 section {
     padding: 50px 0;
 }
+
 section.content {
     padding: 200px 0 50px 0;
     min-height: 830px;
@@ -385,44 +392,40 @@ section.content {
 .section_new {
     padding: 75px 0;
 }
+
 #to-top {
-  display: none;
-  position: fixed;
-  /*top: 5px;
+    display: none;
+    position: fixed;
+    /*top: 5px;
   left: 5px;*/
 }
 
 #to-header {
-
-  /*display: none;*/
-  position:relative
-
-
+    /*display: none;*/
+    position: relative
 }
 
 #home_hidden {
-  display: block ;
+    display: block;
 }
+
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
-
-
 
 .section_member_form {
     /*padding: 140px 0*/
     margin-top: -10px;
     margin-bottom: -250px;
-    
 }
 
 .blockquote_credit {
@@ -431,7 +434,8 @@ section.content {
     font-size: 17.5px;
     border-left: 5px solid #000;
 }
-.blockquote_font{
+
+.blockquote_font {
     padding: 10px 20px;
     margin: 0 0 20px;
     font-size: 17.5px;
@@ -458,20 +462,19 @@ section.success {
     section.first {
         padding-top: 75px
     }
-
     section.cta {
         background: #141628;
-        padding:initial;
-
+        padding: initial;
+    }
+    section.content {
+        padding: 100px 0 50px 0;
     }
     #home_hidden {
-      display: none;
+        display: none;
     }
     #to-top {
-      display: block;
-      
+        display: block;
     }
-
 }
 
 #portfolio .portfolio-item {
