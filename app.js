@@ -26,28 +26,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
 
         .state('about_form', {
-<<<<<<< HEAD
            url: '/about/:id/about_form',
            templateUrl: 'about/views/form.html',
            controller:  'AboutFormController'
-=======
-           url: '/about/about_form',
-           templateUrl: 'about/views/form.html',
-           controller:  'AboutController'
->>>>>>> master
             
         })
 
         .state('about_form_en', {
-<<<<<<< HEAD
            url: '/about/:id/about_form_en',
            templateUrl: 'about/views/form_en.html',
            controller:  'AboutFormController'
-=======
-           url: '/about/about_form_en',
-           templateUrl: 'about/views/form_en.html',
-           controller:  'AboutController'
->>>>>>> master
             
         })
 

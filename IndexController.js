@@ -21,7 +21,6 @@ app
 	    })
 
 	    //判斷$location.path()是否一致
-<<<<<<< HEAD
 		$scope.$on('aboutid', function(event, value1) {
 	   
 	     	if($location.path()=='/about/'+value1+'/about_form'){
@@ -38,8 +37,6 @@ app
 	    })
 
 	    //判斷$location.path()是否一致
-=======
->>>>>>> master
 		$scope.$on('newsid', function(event, value1) {
 	   
 	     	if($location.path()=='/news/'+value1+'/news_form'){
@@ -78,10 +75,7 @@ app
 	        	
 	        	$scope.membersisActive = false; 
 	        	$scope.newsisActive = false;
-<<<<<<< HEAD
 	        	$scope.aboutisActive = false;
-=======
->>>>>>> master
 	        		        
 	        }
 	        
