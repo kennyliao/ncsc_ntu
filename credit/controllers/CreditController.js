@@ -6,7 +6,7 @@ app
     	var valueToPass = "0";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
-	    var url_address = '../geJSONt/data.php?page=course_downloads';
+	    var url_address = 'geJSONt/data.php?page=course_downloads';
 
 			$http.get(url_address).then(
 
@@ -22,7 +22,7 @@ app
 				});
 
 		//歷屆學長姐
-		var url_address_course_graduate = '../geJSONt/data.php?page=course_graduate';
+		var url_address_course_graduate = 'geJSONt/data.php?page=course_graduate';
 
 			$http.get(url_address_course_graduate).then(
 
@@ -38,14 +38,14 @@ app
 				});
 
 		//修課規定
-		var url_address_course_rules = '../geJSONt/data.php?page=course_rules';
+		var url_address_course_rules = 'geJSONt/data.php?page=course_rules';
 
 			$http.get(url_address_course_rules).then(
 
 				function(data) {
 
 					$scope.course_rules = data.data.pagedata;
-					
+
 				},
 				function(err) {
 

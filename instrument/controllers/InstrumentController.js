@@ -7,14 +7,14 @@ app
     	var valueToPass = "0";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
-	    var url_address = '../geJSONt/data.php?page=instrument';
+	    var url_address = 'geJSONt/data.php?page=instrument';
 
 			$http.get(url_address).then(
 
 				function(data) {
 
 					$scope.instrument = data.data.pagedata;
-					
+
 				},
 				function(err) {
 

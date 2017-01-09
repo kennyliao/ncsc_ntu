@@ -1,0 +1,46 @@
+<section class="content">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped" ng-repeat="Data in model">
+                            <tbody>
+                                <tr>
+                                    <th class="col-md-4">
+                                        <p>Title</p>
+                                    </th>
+                                    <td class="col-md-8">
+                                        <p>{{Data.titleEN}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="col-md-4">
+                                        <p>Content</p>
+                                    </th>
+                                    <td class="col-md-8">
+                                        <p>{{Data.contentEN}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="col-md-4">
+                                        <p>Date</p>
+                                    </th>
+                                    <td class="col-md-8">
+                                        <p>{{Data.date}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align:right;" colspan="2">
+                                        <a class="btn btn-primary" ng-click="back()"><span class="glyphicon glyphicon-chevron-left"></span>BACK</a>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
