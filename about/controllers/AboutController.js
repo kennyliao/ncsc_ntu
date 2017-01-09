@@ -6,6 +6,7 @@ app.controller('AboutController', function($scope, $http, $filter, toastr, $base
 	    var valueToPass = "0";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
+<<<<<<< HEAD
 })
 .controller('AboutFormController', function($scope, $http, $filter, toastr, $base64, $rootScope, $location, $stateParams) {
     //非首頁
@@ -34,3 +35,6 @@ app.controller('AboutController', function($scope, $http, $filter, toastr, $base
     
 })
 ;
+=======
+});
+>>>>>>> master

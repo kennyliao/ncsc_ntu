@@ -43,6 +43,13 @@
             color: #db717e;
         }
         
+        .active2 {
+            color: red;
+        }
+        
+        .inactive2 {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -100,7 +107,7 @@
                             <a class="text_white" href="#news_en" ng-class="{'active1':  $location.path() == '/news_en'|| $location.path() == '/news/news_en_more' || newsisActive==true}"><h4>news</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#about_en" ng-class="{'active1':  $location.path() == '/about_en' || aboutisActive==true}"><h4>about us</h4></a>
+                            <a class="text_white" href="#about_en" ng-class="{'active1':  $location.path() == '/about_en' || $location.path() == '/about/about_form_en'}"><h4>about us</h4></a>
                         </li>
                         <li>
                             <a class="text_white" href="#instrument_en" ng-class="{'active1':  $location.path() == '/instrument_en'}"><h4>Laboratory Equipment</h4></a>

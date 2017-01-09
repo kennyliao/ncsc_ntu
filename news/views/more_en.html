@@ -32,7 +32,12 @@
                                             {{New.date}}
                                         </small>
                                     </div>
+<<<<<<< HEAD
                                     <ul uib-pagination boundary-links="true" total-items="news .length" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+=======
+                                    <ul uib-pagination total-items="news .length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false">
+                                    </ul>
+>>>>>>> master
                                 </div>
                                 <div class="col-lg-1 col-lg-offset-9">
                                     <a class="btn btn-primary" ng-click="back()"><span class="glyphicon glyphicon-chevron-left"></span>Back</a>

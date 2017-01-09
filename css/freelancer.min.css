@@ -180,7 +180,11 @@ div.container div.aboutimg img {
     color: #f8f8f8;
 }
 
+<<<<<<< HEAD
 .text_white ,a.text_white:hover,a.text_white:active,a.text_white:focus{
+=======
+.text_white {
+>>>>>>> master
     color: #f8f8f8;
 }
 
