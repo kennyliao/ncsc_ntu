@@ -157,6 +157,9 @@ div.container div.aboutimg img {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+#phone_show {
+        display: none;
+}
 
 .layer {
     font-family: PingFangTC;
@@ -473,6 +476,9 @@ section.success {
         display: none;
     }
     #to-top {
+        display: block;
+    }
+    #phone_show {
         display: block;
     }
 }
@@ -823,3 +829,18 @@ fieldset[disabled] .btn-success:hover {
     opacity: 0;
     display: none
 }
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.mapwidth{padding: 30px;}

@@ -16,7 +16,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'home/views/views_en.html',
             controller:  'HomeController'
         })
-
        
         .state('about', {
             url: '/about',
