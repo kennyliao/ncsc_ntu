@@ -6,13 +6,13 @@ app
 		
 		//判斷$location.path()是否一致
 		$scope.$on('membersid', function(event, value1) {
-	   
-	     	if($location.path()=='/members/'+value1+'/members_form'){
+
+	     	if($location.path()=='/members/members_form/'+value1){
 	        
 	   			$scope.membersisActive = true;
 	   			
 	   		}
-	   		else if($location.path()=='/members/'+value1+'/members_form_en'){
+	   		else if($location.path()=='/members/members_form_en/'+value1){
 	        
 	   			$scope.membersisActive = true;
 	   			
@@ -39,22 +39,22 @@ app
 	    //判斷$location.path()是否一致
 		$scope.$on('newsid', function(event, value1) {
 	   
-	     	if($location.path()=='/news/'+value1+'/news_form'){
+	     	if($location.path()=='/news/news_form/'+value1){
 	        
 	   			$scope.newsisActive = true;
 	   			
 	   		}
-	   		else if($location.path()=='/news/'+value1+'/news_form_en'){
+	   		else if($location.path()=='/news/news_form_en/'+value1){
 	        
 	   			$scope.newsisActive = true;
 	   			
 	   		}
-	   		else if($location.path()=='/news/'+value1+'/news_more'){
+	   		else if($location.path()=='/news/news_more/'+value1){
 	        
 	   			$scope.newsisActive = true;
 	   			
 	   		}
-	   		else if($location.path()=='/news/'+value1+'/news_en_more'){
+	   		else if($location.path()=='/news/news_en_more/'+value1){
 	        
 	   			$scope.newsisActive = true;
 	   			

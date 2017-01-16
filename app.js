@@ -92,23 +92,23 @@ app.config(function($stateProvider, $urlRouterProvider,$locationProvider,$httpPr
             
         })
         .state('news_more', {
-            url: '/news/:id/news_more',
+            url: '/news/news_more/:id',
             templateUrl:'news/views/more.html',
             controller: 'NewsMoreController'
         })
         .state('news_en_more', {
-            url: '/news/:id/news_en_more',
+            url: '/news/news_en_more/:id',
            templateUrl: 'news/views/more_en.html',
            controller:  'NewsMoreController'
             
         })
         .state('news_form', {
-            url: '/news/:id/news_form',
+            url: '/news/news_form/:id',
             templateUrl:'news/views/form.html',
             controller: 'NewsFormController'
         })
         .state('news_form_en', {
-            url: '/news/:id/news_form_en',
+            url: '/news/news_form_en/:id',
             templateUrl:'news/views/form_en.html',
             controller: 'NewsFormController'
         })
@@ -156,12 +156,12 @@ app.config(function($stateProvider, $urlRouterProvider,$locationProvider,$httpPr
             
         })
         .state('members_form', {
-            url: '/members/:id/members_form',
+            url: '/members/members_form/:id',
             templateUrl:'members/views/form.html',
             controller: 'MembersFormController'
         })
         .state('members_form_en', {
-            url: '/members/:id/members_form_en',
+            url: '/members/members_form_en/:id',
             templateUrl:'members/views/form_en.html',
             controller: 'MembersFormController'
         })
