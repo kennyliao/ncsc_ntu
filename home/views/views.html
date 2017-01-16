@@ -13,10 +13,10 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav-justified">
                             <li>
-                                <a class="text_white pull-right" href="index.html#/home"><h4>中文</h4></a>
+                                <a class="text_white pull-right" href="home"><h4>中文</h4></a>
                             </li>
                             <li>
-                                <a class="text_white pull-right" href="index_en.html#/home_en"><h4>English</h4></a>
+                                <a class="text_white pull-right" href="home_en"><h4>English</h4></a>
                             </li>
                         </ul>
                     </div>
@@ -41,12 +41,12 @@
                     <div class="row col-sm-12">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-5 layer_title "></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="#news"><h4>最新消息</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="#about"><h4>關於我們</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="#instrument"><h4>核心儀器</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="#members"><h4>中心成員</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="#credit"><h4>學分學程</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="#links"><h4>相關連結</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a class="text_white" href="news"><h4>最新消息</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a class="text_white" href="about"><h4>關於我們</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a class="text_white" href="instrument"><h4>核心儀器</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a class="text_white" href="members"><h4>中心成員</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a class="text_white" href="credit"><h4>學分學程</h4></a></div>
+                        <div class="col-sm-5 layer_title "><a class="text_white" href="links"><h4>相關連結</h4></a></div>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="col-sm-12" ng-repeat="New in news|limitTo:5">
                     <p class="col-sm-10">
-                        <a href="#/news/{{New.newsNo}}/news_form"> {{New.titleZH_TW}}</a>
+                        <a href="news/{{New.newsNo}}/news_form"> {{New.titleZH_TW}}</a>
                     </p>
                     <p class="col-sm-2 text-muted">
                         {{New.nameZH_TW}}
@@ -84,7 +84,7 @@
                     </small>
                     <hr>
                 </div>
-                <div class="col-sm-12"><a class="btn btn-primary" href="#/news">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                <div class="col-sm-12"><a class="btn btn-primary" href="news">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
             </div>
         </div>
 </section>
@@ -106,7 +106,7 @@
         <br>
         <br>
         <div class="row">
-            <a href="#/members"><img src="images/ours.jpg" class="img-responsive center-block" alt=""></a>
+            <a href="members"><img src="images/ours.jpg" class="img-responsive center-block" alt=""></a>
         </div>
     </div>
 </section>

@@ -22,13 +22,13 @@ app
 
 	    //判斷$location.path()是否一致
 		$scope.$on('aboutid', function(event, value1) {
-	   
-	     	if($location.path()=='/about/'+value1+'/about_form'){
+	
+	     	if($location.path()=='/about/about_form/'+value1){
 	        
 	   			$scope.aboutisActive = true;
 	   			
 	   		}
-	   		else if($location.path()=='/about/'+value1+'/about_form_en'){
+	   		else if($location.path()=='/about/about_form_en/'+value1){
 	        
 	   			$scope.aboutisActive = true;
 	   			
@@ -80,6 +80,19 @@ app
 	        }
 	        
 	    })
+
+	    $scope.$on('eventMenuENCtrl', function(event, valueEN) {
+	    		
+	    	if(valueEN=='1'){
+	    		$scope.en = true;	    		
+	    	}
+	    	else{
+	    		$scope.en = false;	
+	    	}
+
+	    })
+
+	    
 
 
     });

@@ -158,4 +158,76 @@ app
     $scope.back = function() {
         history.back();
     }
-});
+})
+.controller('NewsController_EN', function($scope, $http, $filter, toastr, $base64, $rootScope) {
+    
+    var valueToPass = "0";
+    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
+    
+    var valueEN = "1";
+    $rootScope.$broadcast('eventMenuENCtrl', valueEN);
+
+    $scope.filteredTodos = [], $scope.currentPage = 1, $scope.numPerPage = 10, $scope.maxSize = 5;
+
+    var url_address = 'geJSONt/data.php?page=home_news';
+
+    $http.get(url_address).then(
+
+        function(data) {
+
+            $scope.news = data.data.pagedata;
+
+            //最新消息-分頁
+            $scope.$watch('currentPage + numPerPage', function() {
+                var begin = (($scope.currentPage - 1) * $scope.numPerPage),
+                    end = begin + $scope.numPerPage;
+                $scope.filteredTodos = $scope.news.slice(begin, end);
+
+            })
+        },
+        function(err) {
+
+            console.log(err);
+
+        });
+
+    $scope.year = function(value) {
+
+        var url_address = 'geJSONt/data_years.php?page=news&id=' + value;
+
+        $http.get(url_address).then(
+
+            function(data) {
+
+                $scope.news = data.data.pagedata;
+
+            },
+            function(err) {
+
+                console.log(err);
+
+            });
+
+    };
+
+    $scope.more = function(value) {
+
+        var url_address = 'geJSONt/data.php?page=news_type&id=' + value;
+
+        $http.get(url_address).then(
+
+            function(data) {
+
+                $scope.news = data.data.pagedata;
+
+            },
+            function(err) {
+
+                console.log(err);
+
+            });
+
+    };
+
+})
+;

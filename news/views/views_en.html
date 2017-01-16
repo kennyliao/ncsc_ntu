@@ -3,20 +3,20 @@
         <div class="row">
             <div class="bs-example bs-example-tabs" role="tabpanel">
                 <ul id="myTab" class="nav nav-pills nav-justified " role="tablist">
-                    <li class="active"><a href="news#Speech" id="Speech-tab" role="tab" data-toggle="tab" aria-controls="Speech" aria-expanded="true"><h4 class="text_black">Speeches</h4></a></li>
-                    <li> <a href="news#seminar" role="tab" id="seminar-tab" data-toggle="tab" aria-controls="seminar"><h4 class="text_black">Seminars</h4></a></li>
-                    <li><a href="news#credit" role="tab" id="credit-tab" data-toggle="tab" aria-controls="credit"><h4 class="text_black">Credit courses</h4></a></li>
-                    <li><a href="news#awards" role="tab" id="awards-tab" data-toggle="tab" aria-controls="awards"><h4 class="text_black">Awards</h4></a></li>
+                    <li class="active"><a href="news_en#Speech" id="Speech-tab" role="tab" data-toggle="tab" aria-controls="Speech" aria-expanded="true"><h4 class="text_black">Speeches</h4></a></li>
+                    <li> <a href="news_en#seminar" role="tab" id="seminar-tab" data-toggle="tab" aria-controls="seminar"><h4 class="text_black">Seminars</h4></a></li>
+                    <li><a href="news_en#credit" role="tab" id="credit-tab" data-toggle="tab" aria-controls="credit"><h4 class="text_black">Credit courses</h4></a></li>
+                    <li><a href="news_en#awards" role="tab" id="awards-tab" data-toggle="tab" aria-controls="awards"><h4 class="text_black">Awards</h4></a></li>
                 </ul>
                 <br>
                 <div class="row">
                     <div>
                         <div class="btn-group btn-group-justified">
-                            <a href="#news_en" class="btn btn-default" ng-click="year(2016)">2016</a>
-                            <a href="#news_en" class="btn btn-default" ng-click="year(2015)">2015</a>
-                            <a href="#news_en" class="btn btn-default" ng-click="year(2014)">2014</a>
-                            <a href="#news_en" class="btn btn-default" ng-click="year(2013)">2013</a>
-                            <a href="#news_en" class="btn btn-default" ng-click="year(2012)">2012</a>
+                            <a href="news_en" class="btn btn-default" ng-click="year(2016)">2016</a>
+                            <a href="news_en" class="btn btn-default" ng-click="year(2015)">2015</a>
+                            <a href="news_en" class="btn btn-default" ng-click="year(2014)">2014</a>
+                            <a href="news_en" class="btn btn-default" ng-click="year(2013)">2013</a>
+                            <a href="news_en" class="btn btn-default" ng-click="year(2012)">2012</a>
                         </div>
                     </div>
                 </div>
@@ -43,14 +43,14 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'1'}:true|limitTo:5">
                                         <p>
-                                            <a href="#/news/{{New.newsNo}}/news_form_en"> {{New.titleEN}}</a>
+                                            <a href="news/{{New.newsNo}}/news_form_en"> {{New.titleEN}}</a>
                                         </p>
                                         <small>
                                             {{New.date}}
                                         </small>
                                         <hr>
                                     </div>
-                                    <div class="col-sm-12"><a class="btn btn-primary" href="#/news/1/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a> </div>
+                                    <div class="col-sm-12"><a class="btn btn-primary" href="news/1/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a> </div>
                                 </div>
                             </div>
                         </div>
@@ -78,14 +78,14 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'2'}:true|limitTo:5">
                                         <p>
-                                            <a href="#/news/{{New.newsNo}}/news_form_en">{{New.titleEN}}</a>
+                                            <a href="news/{{New.newsNo}}/news_form_en">{{New.titleEN}}</a>
                                         </p>
                                         <small>
                                             {{New.date}}
                                         </small>
                                         <hr>
                                     </div>
-                                    <div class="col-sm-12"><a class="btn btn-primary" href="#/news/2/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                                    <div class="col-sm-12"><a class="btn btn-primary" href="news/2/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -113,14 +113,14 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5">
                                         <p>
-                                            <a href="#/news/{{New.newsNo}}/news_form_en_en">{{New.titleEN}}</a>
+                                            <a href="news/{{New.newsNo}}/news_form_en">{{New.titleEN}}</a>
                                         </p>
                                         <small>
                                             {{New.date}}
                                         </small>
                                         <hr>
                                     </div>
-                                    <div class="col-sm-12"><a class="btn btn-primary" href="#/news/3/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                                    <div class="col-sm-12"><a class="btn btn-primary" href="news/3/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -148,14 +148,14 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'4'}:true|limitTo:5">
                                         <p>
-                                            <a href="#/news/{{New.newsNo}}/news_form_en_en">{{New.titleEN}}</a>
+                                            <a href="news/{{New.newsNo}}/news_form_en">{{New.titleEN}}</a>
                                         </p>
                                         <small>
                                             {{New.date}}
                                         </small>
                                         <hr>
                                     </div>
-                                    <div class="col-sm-12"><a class="btn btn-primary" href="#/news/4/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                                    <div class="col-sm-12"><a class="btn btn-primary" href="news/4/news_en_more">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                                 </div>
                             </div>
                         </div>
