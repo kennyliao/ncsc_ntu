@@ -3,13 +3,13 @@ var app = angular.module('app');
 app.controller('AboutController', function($scope, $http, $filter, toastr, $base64, $rootScope, $route) {
     	
     	$route.reload();
-	    var valueToPass = "0";
+	    var valueToPass = "about";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 })
 .controller('AboutFormController', function($scope, $http, $filter, toastr, $base64, $rootScope, $location, $stateParams) {
     //非首頁
-    var valueToPass = "0";
+    var valueToPass = "about";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
     var value = $stateParams.id;
@@ -32,7 +32,7 @@ app.controller('AboutController', function($scope, $http, $filter, toastr, $base
 })
 .controller('AboutController_EN', function($scope, $http, $filter, toastr, $base64, $rootScope) {
     
-    var valueToPass = "0";
+    var valueToPass = "about_en";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
     
     var valueEN = "1";
@@ -41,7 +41,7 @@ app.controller('AboutController', function($scope, $http, $filter, toastr, $base
 })
 .controller('AboutFormController_EN', function($scope, $http, $filter, toastr, $base64, $rootScope, $stateParams) {
     
-    var valueToPass = "0";
+    var valueToPass = "about_en";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
     
     var valueEN = "1";

@@ -3,8 +3,13 @@ var app = angular.module('app');
 app
 
 .controller('NewsController', function($scope, $http, $filter, toastr, $base64, $rootScope) {
-    var valueToPass = "0";
+    var valueToPass = "news";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
+
+    //最新消息年份篩選(自動讀取今年年份)
+    var d = new Date();
+    $scope.yearnow=d.getFullYear();
+   
 
     $scope.filteredTodos = [], $scope.currentPage = 1, $scope.numPerPage = 10, $scope.maxSize = 5;
 
@@ -74,7 +79,7 @@ app
 
 .controller('NewsFormController', function($scope, $http, $filter, toastr, $base64, $rootScope, $location, $stateParams) {
     //非首頁
-    var valueToPass = "0";
+    var valueToPass = "news";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
     var value = $stateParams.id;
@@ -105,7 +110,7 @@ app
 
 .controller('NewsMoreController', function($scope, $http, $filter, toastr, $base64, $rootScope, $location, $stateParams) {
     //非首頁
-    var valueToPass = "0";
+    var valueToPass = "news";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 
@@ -161,8 +166,12 @@ app
 })
 .controller('NewsController_EN', function($scope, $http, $filter, toastr, $base64, $rootScope) {
     
-    var valueToPass = "0";
+    var valueToPass = "news_en";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
+
+    //最新消息年份篩選(自動讀取今年年份)
+    var d = new Date();
+    $scope.yearnow=d.getFullYear();
     
     var valueEN = "1";
     $rootScope.$broadcast('eventMenuENCtrl', valueEN);

@@ -4,7 +4,7 @@ app
 
     .controller('MembersController', function($scope, $http, $filter, toastr, $base64, $rootScope) {
     //非首頁
-        var valueToPass = "0";
+        var valueToPass = "members";
         $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 
@@ -59,7 +59,7 @@ app
 
 .controller('MembersController_EN', function($scope, $http, $filter, toastr, $base64, $rootScope) {
     //非首頁
-        var valueToPass = "0";
+        var valueToPass = "members_en";
         $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
         var valueEN = "1";
@@ -116,7 +116,7 @@ app
 
 .controller('MembersFormController', function($scope, $http, $filter, toastr, $base64, $rootScope, $location, $stateParams) {
     //非首頁
-    var valueToPass = "0";
+    var valueToPass = "members";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 

@@ -38,11 +38,14 @@
     <script type="text/javascript" src="home/controllers/HomeController.js"></script>
     <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
     <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+    
+
     <style>
         .active1 {
             background: #e6e6e6;
             color: #db717e;
         }
+        
     </style>
 </head>
 
@@ -203,7 +206,7 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-12">
+                    <div class="footer-col col-md-10">
                         <ul class="list-inline">
                             <li>
                                 <i class="fa fa-fw fa-phone"></i>
@@ -228,6 +231,22 @@
                                 10617 台北市羅斯福路四段1號 心理系南館107室
                             </li>
                         </ul>
+                    </div>
+                    <div class="footer-col col-md-2">
+                        <div class="form-group" ng-if="en">                          
+                            <select class="form-control" id="sel1" onchange="javascript:location.href = this.value;">
+                                <option value="{{page}}" id="ch">中文</option>
+                                <option value="{{page}}_en" id="en" selected>English</option>                       
+                            </select>
+                            
+                        </div>
+                        <div class="form-group" ng-if="!en">                          
+                            <select class="form-control" id="sel1" onchange="javascript:location.href = this.value;">
+                                <option value="{{page}}" id="ch" selected>中文</option>
+                                <option value="{{page}}_en" id="en">English</option>                       
+                            </select>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

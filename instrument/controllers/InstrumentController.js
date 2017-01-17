@@ -4,7 +4,7 @@ app
 
     .controller('InstrumentController',function($scope,$http,$filter,toastr,$base64,$rootScope) {
 
-    	var valueToPass = "0";
+    	var valueToPass = "instrument";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 	    var url_address = 'geJSONt/data.php?page=instrument';
@@ -26,7 +26,7 @@ app
 
 	.controller('InstrumentController_EN', function($scope, $http, $filter, toastr, $base64, $rootScope) {
 		
-		var valueToPass = "0";
+		var valueToPass = "instrument_en";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 	    
 	    var valueEN = "1";

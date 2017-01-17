@@ -3,7 +3,7 @@ var app = angular.module('app');
 app
 
     .controller('CreditController',function($scope,$http,$filter,toastr,$base64,$rootScope) {
-    	var valueToPass = "0";
+    	var valueToPass = "credit";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 	    var url_address = 'geJSONt/data.php?page=course_downloads';
@@ -54,7 +54,7 @@ app
 				});
     })
     .controller('CreditController_EN',function($scope,$http,$filter,toastr,$base64,$rootScope) {
-    	var valueToPass = "0";
+    	var valueToPass = "credit_en";
 	    $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
 	    var valueEN = "1";

@@ -67,9 +67,27 @@ app
 	    		
 	    	if(value=='1'){
 	    		$scope.homepage = true;
+	    		
+	    		var pagenow='home';
+	        	$scope.page=pagenow;
+	        		
+	        	
 	    	}
 	        else{
-
+	        	
+	        	//判斷目前頁面是中文或英文頁面
+	        	var pagenow=value;
+	        	
+	        	if(pagenow.match("_en")=='_en'){
+					var pagesplit = pagenow.split("_en");
+					$scope.page=pagesplit.toString();
+	        	}
+	        	else{
+	        		
+	        		$scope.page=pagenow;
+	        		
+	        	}
+	        	
 	        	$scope.homepage = false;
 	        	$scope.$location = $location;
 	        	
