@@ -49,44 +49,8 @@
     </style>
 </head>
 
-<body id="page-top" class="index">
-    <div id="to-top" class="navbar navbar-default navbar-fixed-top navbar-custom" ng-if="homepage && !en">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <div class="navbar-header logo">
-                    <a href="/NTU/">
-                        <img src="img/pic/ncsc_logo_white.png" alt="">
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-pills nav-justified custom clickme">
-                        <li>
-                            <a class="text_white" href="news"><h4>最新消息</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="about"><h4>關於我們</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="instrument"><h4>核心儀器</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="members"><h4>中心成員</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="credit"><h4>學分學程</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="links"><h4>相關連結</h4></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row navbar-fixed-top navbar-custom" ng-if="!homepage && !en">
+<body id="page-top" class="index">   
+    <div ng-if="!en" ng-class="{true: 'topbar navbar navbar-default navbar-fixed-top navbar-custom to-top', false: 'topbar navbar navbar-default navbar-fixed-top navbar-custom'}[homepage]">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -122,51 +86,14 @@
             </div>
         </div>
     </div>
-    <!--EN Start-->
-    <div id="to-top" class="navbar navbar-default navbar-fixed-top navbar-custom" ng-if="homepage && en">
+    <div ng-if="en" ng-class="{true: 'topbar navbar navbar-default navbar-fixed-top navbar-custom to-top', false: 'topbar navbar navbar-default navbar-fixed-top navbar-custom'}[homepage]">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <div class="navbar-header logo">
-                    <a href="home_en">
-                        <img src="img/pic/ncsc_logo_white.png" alt="">
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-pills nav-justified custom clickme">
-                        <li>
-                            <a class="text_white" href="news_en"><h4>news</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="about_en"><h4>about us</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="instrument_en"><h4>Laboratory Equipment</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="members_en"><h4>members</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="credit_en"><h4>credit courses</h4></a>
-                        </li>
-                        <li>
-                            <a class="text_white" href="links_en"><h4>related links</h4></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row navbar-fixed-top navbar-custom" ng-if="!homepage && en">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <div class="navbar-header logo">
-                    <a href="home_en">
+                    <a href="/NTU/">
                         <img src="img/pic/ncsc_logo_white.png" alt="">
                     </a>
                 </div>
@@ -194,8 +121,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!--EN End-->
+    </div>    
     <header>
         <div class="container">
         </div>
@@ -272,30 +198,11 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Bootstrap homepage hidden and show jQuery setting -->
     <script>
-    var fixed = false;
     $(document).scroll(function() {
-        wdth = $(window).width();
         if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                $('#to-top').show();
-                $('#to-top').css(
-                    "position", "fixed",
-                    "display", "block");
-            };
-
+            $('div.topbar').addClass('slide-effect');
         } else {
-            if (fixed) {
-
-                if (wdth > 767) {
-                    fixed = false;
-                    $('#to-top').hide();
-                    $('#to-top').css(
-                        "position", "fixed",
-                        "display", "block");
-
-                }
-            }
+            $('div.topbar').removeClass('slide-effect');
         }
     });
 

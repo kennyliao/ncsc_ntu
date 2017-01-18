@@ -7,6 +7,8 @@ app
         var valueToPass = "members";
         $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
+        $scope.filteredTodos = [], $scope.currentPage = 1, $scope.numPerPage = 20, $scope.maxSize = 5;
+
 
         var url_address = 'geJSONt/data.php?page=members';
         $http.get(url_address).then(
@@ -14,7 +16,17 @@ app
             function(data) {
 
                 $scope.members = data.data.pagedata;
-                $scope.chunkedData = chunk($scope.members, 4);
+                
+
+                //分頁
+                $scope.$watch('currentPage + numPerPage', function() {
+                    var begin = (($scope.currentPage - 1) * $scope.numPerPage),
+                        end = begin + $scope.numPerPage;
+
+                    $scope.filteredTodos = $scope.members.slice(begin, end);
+                    $scope.chunkedData = chunk($scope.filteredTodos, 4);
+
+                })
 
             },
             function(err) {
@@ -65,13 +77,26 @@ app
         var valueEN = "1";
         $rootScope.$broadcast('eventMenuENCtrl', valueEN);
 
+        $scope.filteredTodos = [], $scope.currentPage = 1, $scope.numPerPage = 20, $scope.maxSize = 5;
+
         var url_address = 'geJSONt/data.php?page=members';
         $http.get(url_address).then(
+
 
             function(data) {
 
                 $scope.members = data.data.pagedata;
-                $scope.chunkedData = chunk($scope.members, 4);
+
+                //分頁
+                $scope.$watch('currentPage + numPerPage', function() {
+                    var begin = (($scope.currentPage - 1) * $scope.numPerPage),
+                        end = begin + $scope.numPerPage;
+
+                    $scope.filteredTodos = $scope.members.slice(begin, end);
+                    $scope.chunkedData = chunk($scope.filteredTodos, 4);
+
+                })
+                
 
             },
             function(err) {

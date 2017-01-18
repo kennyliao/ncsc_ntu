@@ -81,6 +81,7 @@ app
 	        	if(pagenow.match("_en")=='_en'){
 					var pagesplit = pagenow.split("_en");
 					$scope.page=pagesplit.toString();
+
 	        	}
 	        	else{
 	        		
