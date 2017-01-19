@@ -4,6 +4,17 @@ app.config(function($stateProvider, $urlRouterProvider,$locationProvider,$httpPr
     
     $stateProvider
         
+        .state('admin', {
+            url: '/admin',
+            templateUrl: 'admin/back_login.php',
+            controller:  'AdminController'
+          
+        })
+        .state('admin/', {
+            url: '/admin/',
+            templateUrl: 'admin/back_login.php',
+            controller:  'AdminController'
+        })
 
         .state('home', {
             url: '/home',

@@ -2,23 +2,23 @@
     <div class="container" ng-repeat="MembersData in model">
         <br>
         <div class="row">
-            <div class="col-sm-4 text-center">
-                <img class="img-circle img-responsive center-block" ng-src="{{MembersData.avatar}}" alt="">
+            <div class="col-sm-5 col-md-4 text-center">
+                <img class="img-circle img-responsive center-block imgsize_form" ng-src="{{MembersData.avatar}}" alt="">
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-7 col-md-8">
                 <dl class="dl-horizontal h3">
-                    <dt><i class="fa fa-user"></i></dt>
-                    <dd>{{MembersData.nameEN}}</dd>
+                    <dt class="members_icon_phone"><i class="fa fa-user"></i></dt>
+                    <dd class="members_content_phone">{{MembersData.nameEN}}</dd>
                     <dt></dt>
-                    <dd>{{MembersData.jobTitleEN}}</dd>
+                    <dd class="members_content_phone">{{MembersData.jobTitleEN}}</dd>
                     <dt></dt>
-                    <dt><i class="fa fa-phone"></i></dt>
-                    <dd>Office: {{MembersData.phone1}}</dd>
+                    <dt class="members_icon_phone"><i class="fa fa-phone"></i></dt>
+                    <dd class="members_content_phone">{{MembersData.phone1}}</dd>
                     <dt></dt>
-                    <dd>Lab: {{MembersData.phone2}}</dd>
+                    <dd class="members_content_phone">{{MembersData.phone2}}</dd>
                     <br>
-                    <dt><i class="fa fa-envelope"></i></dt>
-                    <dd>{{MembersData.email}}</dd>
+                    <dt class="members_icon_phone"><i class="fa fa-envelope"></i></dt>
+                    <dd class="members_content_phone">{{MembersData.email}}</dd>
                 </dl>
             </div>
         </div>

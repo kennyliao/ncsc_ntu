@@ -889,5 +889,19 @@ div.topbar.to-top.slide-effect{
 .imgsize{
     width: 120px;
     height: 120px;
+}
+.imgsize_form{
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width:767px) {
+    .members_icon_phone{
+        display: none;
+    }
+    .members_content_phone{
+        text-align: center;
+    }
+    text-align: center;
 
 }

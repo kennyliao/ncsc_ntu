@@ -83,4 +83,10 @@ app
 
         });
 
-});
+})
+.controller('AdminController', function($scope, $http, $filter, toastr, $base64, $rootScope) {
+    
+    document.location.href="admin/back_login.php";
+
+})
+;
