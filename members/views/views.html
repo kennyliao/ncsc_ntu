@@ -19,7 +19,7 @@
         <div class="row" ng-repeat="Member in chunkedData">
             <br>
             <div class="col-xs-6 col-sm-3 text-center" ng-repeat="Members in Member">
-                <a href="members/members_form/{{Members.memberNo}}"><img class="img-circle img-responsive center-block" ng-src="{{Members.avatar}}" alt="" height="120" width="120"></a>
+                <a href="members/members_form/{{Members.memberNo}}"><img class="img-circle img-responsive center-block imgsize" ng-src="{{Members.avatar}}" alt=""></a>
                 <h3>{{Members.nameZH_TW}}</h3>
                 <small>{{Members.nameEN}}</small>
             </div>
