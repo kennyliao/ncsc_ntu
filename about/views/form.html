@@ -2,30 +2,28 @@
     <div class="container">
         <br>
         <div class="row">
-            <div class="col-sm-4 text-center">
-                <img class="img-circle img-responsive center-block" ng-src="images/graduate1.png" alt="">
+            <div class="col-sm-5 col-md-4  text-center">
+                <img class="img-circle img-responsive center-block imgsize_form" ng-src="images/graduate1.png" alt="">
             </div>
-            <div class="col-sm-8" ng-repeat="Model in model">
+            <div class="col-sm-7 col-md-8" ng-repeat="Model in model">
                 <dl class="dl-horizontal h3">
-                    <dt><i class="fa fa-user"></i></dt>
-                    <dd>{{Model.Name}}</dd>
+                    <dt class="members_icon_phone"><i class="fa fa-user"></i></dt>
+                    <dd class="members_content_phone">{{Model.Name}}</dd>
                     <dt></dt>
-                    <dd>{{Model.title}}</dd>
+                    <dd class="members_content_phone">{{Model.title}}</dd>
                     <dt></dt>
-                    <dt><i class="fa fa-phone"></i></dt>
-                    <dd>辦公室: {{Model.phone}}</dd>
+                    <dt class="members_content_phone icon_hight"><i class="fa fa-phone"></i></dt>
+                    <dd class="members_content_phone">{{Model.phone}}</dd>
                     <dt></dt>
-                    <!-- <dd>研究室: +886 - 2 - 33663827</dd> -->
-                    <br>
-                    <dt><i class="fa fa-envelope"></i></dt>
-                    <dd>{{Model.mail}}</dd>
+                    <dt class="members_content_phone icon_hight"><i class="fa fa-envelope"></i></dt>
+                    <dd class="members_content_phone">{{Model.mail}}</dd>
                 </dl>
             </div>
         </div>
         <hr>        
         <div class="row">
             <div class="col-md-1 col-md-offset-11">
-                <a class="btn btn-primary" href="about"><span class="glyphicon glyphicon-chevron-left"></span>返回 </a>
+                <a class="btn btn-primary btn_right" href="about"><span class="glyphicon glyphicon-chevron-left"></span>返回</a>
             </div>
         </div>
     </div>
