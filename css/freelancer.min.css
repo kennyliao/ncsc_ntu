@@ -902,6 +902,18 @@ div.topbar.to-top.slide-effect{
     .members_content_phone{
         text-align: center;
     }
-    text-align: center;
+    .icon_left{
+        position: relative;
+    }
+    .icon_hight{
+        margin-top:25px ;
+        margin-bottom:5px ;
+    }
+   
+}
+@media (max-width:413px) {
+    li.address_left{
+        padding-left: 35px;
+    }
 
 }
