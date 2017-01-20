@@ -30,7 +30,7 @@
                 <h1>
                     <small>Lab Introduction & Major Research Interests</small>
                 </h1>
-                <p>{{MembersData.introduction}}</p>
+                <p ng-bind-html="MembersData.introduction"></p>
             </div>
         </div>
         <hr>
@@ -39,7 +39,7 @@
                 <h1>
                     <small>Recent Representative Publication (* corresponding author)</small>
                 </h1>
-                <div>{{MembersData.publications}}</div>
+                <div ng-bind-html="MembersData.publications"></div>
             </div>
         </div>
         <div class="row">
