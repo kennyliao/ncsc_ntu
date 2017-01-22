@@ -920,3 +920,8 @@ div.topbar.to-top.slide-effect{
 div a.btn_right{
     float: right;
 }
+.phone_select{
+    display: inline-block;
+    width: 80%;
+}
+

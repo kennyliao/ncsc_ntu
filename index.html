@@ -37,7 +37,7 @@
     <script type="text/javascript" src="IndexController.js"></script>
     <script type="text/javascript" src="home/controllers/HomeController.js"></script>
     <script src="js/angular-sanitize.js"></script>
-    
+
     <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
     <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
     
@@ -134,7 +134,7 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-10">
+                    <div class="footer-col col-md-9">
                         <ul class="list-inline">
                             <li>
                                 <i class="fa fa-fw fa-phone"></i>
@@ -163,22 +163,28 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-col col-md-2">
+                    <div class="footer-col col-md-3">
                         <div class="form-group" ng-if="en">                          
-                            <select class="form-control" id="sel1" onchange="javascript:location.href = this.value;">
+                            <select class="form-control phone_select" id="sel1" onchange="javascript:location.href = this.value;">
                                 <option value="{{page}}" id="ch">中文</option>
                                 <option value="{{page}}_en" id="en" selected>English</option>                       
                             </select>
-                            
+                            <a href="geJSONt/RSS_EN.php" target="_blank">
+                              <img src="images/rss.png" height="30" width="30">
+                            </a>
                         </div>
                         <div class="form-group" ng-if="!en">                          
-                            <select class="form-control" id="sel1" onchange="javascript:location.href = this.value;">
+                            <select class="form-control phone_select" id="sel1" onchange="javascript:location.href = this.value;">
                                 <option value="{{page}}" id="ch" selected>中文</option>
-                                <option value="{{page}}_en" id="en">English</option>                       
-                            </select>
-                            
-                        </div>
+                                <option value="{{page}}_en" id="en">English</option>
+                            </select>                           
+                            <a href="geJSONt/RSS.php" target="_blank">
+                              <img src="images/rss.png" height="30" width="30">
+                            </a>
+                        </div>                                       
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>
