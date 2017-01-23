@@ -38,13 +38,14 @@ try{
 //產生xml
 header('Content-Type: text/xml');
 
+
 $data_array=$emparray;
 $title_size = 1;
  
 $xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss version=\"2.0\" >\n";
 $xml .= "<channel>
             <title>NCSC NTU</title>
-            <link></link>
+            <link>". $_SERVER['SERVER_NAME']."</link>
             <description>NCSC NTU</description>
             ";
               
@@ -58,13 +59,13 @@ $xml .= "</channel></rss>\n";
 echo $xml;
 
  
-//  創建選單
+//  創建選單，link的路徑要更正。
 function create_item($title_data, $title_size, $content_data, $pubdate_data, $links) {
     
     $item = "<item>\n";
     $item .= "<title>" . $title_data . "</title>\n";
     $item .= "<description>" . $content_data . "</description>\n";
-    $item .= " <link>/news/news_form/" . $links . "</link>\n";
+    $item .= " <link>http://". $_SERVER['SERVER_NAME']."/news/news_form/". $links . "</link>\n";
     $item .= " <pubdate>" . $pubdate_data . "</pubdate>\n";
     $item .= "</item>\n";
  

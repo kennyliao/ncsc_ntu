@@ -41,11 +41,12 @@ header('Content-Type: text/xml');
 $data_array=$emparray;
 $title_size = 1;
  
-$xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss version=\"2.0\" >\n";
+$xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n";
 $xml .= "<channel>
             <title>NCSC NTU</title>
-            <link></link>
+            <link>http://". $_SERVER['SERVER_NAME']."</link>
             <description>NCSC NTU</description>
+
             ";
               
             foreach ($data_array as $data) {
@@ -53,9 +54,10 @@ $xml .= "<channel>
                 
             }
  
-$xml .= "</channel></rss>\n";
+$xml .= "</channel>\n</rss>";
  
 echo $xml;
+
 
  
 //  創建選單
@@ -64,8 +66,8 @@ function create_item($title_data, $title_size, $content_data, $pubdate_data, $li
     $item = "<item>\n";
     $item .= "<title>" . $title_data . "</title>\n";
     $item .= "<description>" . $content_data . "</description>\n";
-    $item .= " <link>/news/news_form/" . $links . "</link>\n";
-    $item .= " <pubdate>" . $pubdate_data . "</pubdate>\n";
+    $item .= " <link>http://". $_SERVER['SERVER_NAME']."/news/news_form/". $links . "</link>\n";
+    $item .= " <pubDate>" . $pubdate_data . "</pubDate>\n";
     $item .= "</item>\n";
  
     return $item;
