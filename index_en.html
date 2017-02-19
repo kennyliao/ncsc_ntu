@@ -62,22 +62,22 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav nav-pills nav-justified custom clickme">
                         <li>
-                            <a class="text_white" href="#news_en"><h4>news</h4></a>
+                            <a class="text_white" href="#news_en" ng-click="click()"><h4>news</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#about_en"><h4>about us</h4></a>
+                            <a class="text_white" href="#about_en" ng-click="click()"><h4>about us</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#members_en"><h4>members</h4></a>
+                            <a class="text_white" href="#members_en" ng-click="click()"><h4>members</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#credit_en"><h4>credit courses</h4></a>
+                            <a class="text_white" href="#credit_en" ng-click="click()"><h4>credit courses</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#instrument_en"><h4>Laboratory Equipment</h4></a>
+                            <a class="text_white" href="#instrument_en" ng-click="click()"><h4>Laboratory Equipment</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#links_en"><h4>related links</h4></a>
+                            <a class="text_white" href="#links_en" ng-click="click()"><h4>related links</h4></a>
                         </li>
                     </ul>
                 </div>
@@ -98,22 +98,22 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav nav-pills nav-justified custom clickme">
                         <li>
-                            <a class="text_white" href="#news_en" ng-class="{'active1':  $location.path() == '/news_en'|| $location.path() == '/news/news_en_more' || newsisActive==true}"><h4>news</h4></a>
+                            <a class="text_white" href="#news_en" ng-class="{'active1':  $location.path() == '/news_en'|| $location.path() == '/news/news_en_more' || newsisActive==true}" ng-click="click()"><h4>news</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#about_en" ng-class="{'active1':  $location.path() == '/about_en' || aboutisActive==true}"><h4>about us</h4></a>
+                            <a class="text_white" href="#about_en" ng-class="{'active1':  $location.path() == '/about_en' || aboutisActive==true}" ng-click="click()"><h4>about us</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#members_en" ng-class="{'active1':  $location.path() == '/members_en' || membersisActive==true}"><h4>members</h4></a>
+                            <a class="text_white" href="#members_en" ng-class="{'active1':  $location.path() == '/members_en' || membersisActive==true}" ng-click="click()"><h4>members</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#credit_en" ng-class="{'active1':  $location.path() == '/credit_en'}"><h4>credit courses</h4></a>
+                            <a class="text_white" href="#credit_en" ng-class="{'active1':  $location.path() == '/credit_en'}" ng-click="click()"><h4>credit courses</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#instrument_en" ng-class="{'active1':  $location.path() == '/instrument_en'}"><h4>Laboratory Equipment</h4></a>
+                            <a class="text_white" href="#instrument_en" ng-class="{'active1':  $location.path() == '/instrument_en'}"ng-click="click()"><h4>Laboratory Equipment</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="#links_en" ng-class="{'active1':  $location.path() == '/links_en'}"><h4>related links</h4></a>
+                            <a class="text_white" href="#links_en" ng-class="{'active1':  $location.path() == '/links_en'}" ng-click="click()"><h4>related links</h4></a>
                         </li>
                     </ul>
                 </div>
@@ -209,7 +209,7 @@
 
     /* Bootstrap RWD Click MenuBar to close jQuery setting*/
     $(document).on('click', function() {
-        $('.collapse').collapse('hide');
+        // $('.collapse').collapse('hide');
     })
     </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

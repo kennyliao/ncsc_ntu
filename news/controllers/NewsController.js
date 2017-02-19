@@ -3,6 +3,13 @@ var app = angular.module('app');
 app
 
 .controller('NewsController', function($scope, $http, $filter, toastr, $base64, $rootScope) {
+    var selector = '#year a';
+   
+    $(selector).on('click', function(){
+        $(selector).removeClass('yearactive');
+        $(this).addClass('yearactive');
+    });
+
     var valueToPass = "news";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);
 
@@ -169,6 +176,13 @@ app
     }
 })
 .controller('NewsController_EN', function($scope, $http, $filter, toastr, $base64, $rootScope) {
+    
+    var selector = '#year a';
+   
+    $(selector).on('click', function(){
+        $(selector).removeClass('yearactive');
+        $(this).addClass('yearactive');
+    });
     
     var valueToPass = "news_en";
     $rootScope.$broadcast('eventMenuCtrl', valueToPass);

@@ -111,7 +111,11 @@ app
 
 	    })
 
-	    
+	    $scope.click = function () {
+
+		   $('.collapse').collapse('hide');
+		   
+		};
 
 
     });
