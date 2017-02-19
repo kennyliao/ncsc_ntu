@@ -3,23 +3,18 @@
         <div class="row">
             <div class="bs-example bs-example-tabs" role="tabpanel">
                 <ul id="myTab" class="nav nav-pills nav-justified " role="tablist">
-                    <li class="active"><a href="news_en#Speech" id="Speech-tab" role="tab" data-toggle="tab" aria-controls="Speech" aria-expanded="true"><h4 class="text_black">Speeches</h4></a></li>
-                    <li> <a href="news_en#seminar" role="tab" id="seminar-tab" data-toggle="tab" aria-controls="seminar"><h4 class="text_black">Seminars</h4></a></li>
-                    <li><a href="news_en#credit" role="tab" id="credit-tab" data-toggle="tab" aria-controls="credit"><h4 class="text_black">Credit courses</h4></a></li>
-                    <li><a href="news_en#awards" role="tab" id="awards-tab" data-toggle="tab" aria-controls="awards"><h4 class="text_black">Awards</h4></a></li>
+                    <li class="active"><a href="news_en#Speech" id="Speech-tab" role="tab" data-toggle="tab" aria-controls="Speech" aria-expanded="true"><h4 class="text_black">Speeches and Seminars</h4></a></li>
+                    <li> <a href="news_en#seminar" role="tab" id="seminar-tab" data-toggle="tab" aria-controls="seminar"><h4 class="text_black">Bulletin</h4></a></li>
+                    <li><a href="news_en#credit" role="tab" id="credit-tab" data-toggle="tab" aria-controls="credit"><h4 class="text_black">digital publications</h4></a></li>
+                    <li><a href="news_en#awards" role="tab" id="awards-tab" data-toggle="tab" aria-controls="awards"><h4 class="text_black">activities</h4></a></li>
                 </ul>
                 <br>
                 <div class="container">
-                    
-                        <div class="btn-group btn-group-justified">
-                            <a href="news_en" class="btn btn-default" ng-click="year(yearnow)">{{ yearnow }}</a>
-                            <a href="news_en" class="btn btn-default" ng-click="year(yearnow-1)">{{ yearnow-1 }}</a>
-                            <a href="news_en" class="btn btn-default" ng-click="year(yearnow-2)">{{ yearnow-2 }}</a>
-                            <a href="news_en" class="btn btn-default" ng-click="year(yearnow-3)">{{ yearnow-3 }}</a>
-                            <a href="news_en" class="btn btn-default" ng-click="year(yearnow-4)">{{ yearnow-4 }}</a>
-                            
-                        </div>
-                    
+                    <div class="btn-group btn-group-justified">
+                        <a href="news_en" class="btn btn-default" ng-click="year(yearnow)">{{ yearnow }}</a>
+                        <a href="news_en" class="btn btn-default" ng-click="year(yearnow-1)">{{ yearnow-1 }}</a>
+                        <a href="news_en" class="btn btn-default" ng-click="year(yearnow-2)">{{ yearnow-2 }}</a>
+                    </div>
                 </div>
                 <div id="myTabContent" class="tab-content ">
                     <!-- 演講 -->
@@ -42,7 +37,7 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'1'}:true|limitTo:5">
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'1'}:true|limitTo:5|orderBy:'date':true">
                                         <p>
                                             <a href="news/news_form_en/{{New.newsNo}}"> {{New.titleEN}}</a>
                                         </p>
@@ -57,7 +52,7 @@
                         </div>
                     </div>
                     <!-- 演講 END -->
-                    <!-- 研討會 -->
+                    <!-- 訊息公告 -->
                     <div role="tabpanel" class="tab-pane fade" id="seminar" aria-labelledBy="seminar-tab">
                         <div class="container">
                             <br>
@@ -77,7 +72,7 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'2'}:true|limitTo:5">
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'2'}:true|limitTo:5|orderBy:'date':true">
                                         <p>
                                             <a href="news/news_form_en/{{New.newsNo}}">{{New.titleEN}}</a>
                                         </p>
@@ -91,8 +86,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 研討會 END-->
-                    <!-- 學分學程-->
+                    <!-- 訊息公告 END-->
+                    <!-- 電子刊物-->
                     <div role="tabpanel" class="tab-pane fade" id="credit" aria-labelledBy="credit-tab">
                         <div class="container">
                             <br>
@@ -112,7 +107,7 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5">
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5|orderBy:'date':true">
                                         <p>
                                             <a href="news/news_form_en/{{New.newsNo}}">{{New.titleEN}}</a>
                                         </p>
@@ -126,8 +121,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 學分學程 END-->
-                    <!-- Awards-->
+                    <!-- 電子刊物 END-->
+                    <!-- 中心花絮-->
                     <div role="tabpanel" class="tab-pane fade" id="awards" aria-labelledBy="awards-tab">
                         <div class="container">
                             <br>
@@ -147,7 +142,7 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'4'}:true|limitTo:5">
+                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'4'}:true|limitTo:5|orderBy:'date':true">
                                         <p>
                                             <a href="news/news_form_en/{{New.newsNo}}">{{New.titleEN}}</a>
                                         </p>
@@ -161,7 +156,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Awards END-->
+                    <!-- 中心花絮 END-->
                 </div>
             </div>
         </div>

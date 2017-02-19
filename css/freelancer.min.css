@@ -8,9 +8,16 @@ body {
     font-family: Lato, "Microsoft Jhenghei", 'Helvetica Neue', Helvetica, Arial, sans-serif;
     overflow-x: hidden
 }
-
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ol li{
+    font-size: 18px;
+}
 p {
-    font-size: 20px
+    font-size: 18px
 }
 
 p.small {
@@ -99,10 +106,17 @@ header {
 
 header {
     text-align: center;
-    /*background: #18BC9C;*/
-    /*background: url("../img/pic/background.JPG");
-    background-size: cover;*/
 }
+section.cta.home div.logo{
+    margin-bottom: 80px;
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    section.cta.home div.logo{
+        margin-bottom: 50px;
+    }
+}
+
+
 
 div.to-top div.navbar-header div.logo img,
 .navbar-fixed-top div.navbar-header div.logo img,
@@ -111,13 +125,97 @@ section.cta div.logo img {
     margin-right: 20px;
     padding-top: 5px;
     padding-left: 10px;
-
+}
+div.to-top div.navbar-header div.logo img.ntu,
+.navbar-fixed-top div.navbar-header div.logo img.ntu,
+section.cta div.logo img.ntu{
+    width: 180px;
+    margin-top: 10px;
+}
+@media screen and (min-width:1200px) {
+    div.to-top div.navbar-header div.logo img.sublogo,
+    .navbar-fixed-top div.navbar-header div.logo img.sublogo,
+    section.cta div.logo img.sublogo{
+        width: 490px;
+        margin-left: 0;
+        margin-right: 0;
+        float: right;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px){
+    div.to-top div.navbar-header div.logo img.sublogo,
+    .navbar-fixed-top div.navbar-header div.logo img.sublogo,
+    section.cta div.logo img.sublogo{
+        width: 440px;
+        margin-left: 0;
+        margin-right: 0;
+        float: right;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    div.to-top div.navbar-header div.logo img.sublogo,
+    .navbar-fixed-top div.navbar-header div.logo img.sublogo,
+    section.cta div.logo img.sublogo{
+        width: 330px;
+        margin-left: 0;
+        margin-right: 0;
+        float: right;
+    }
+    div.to-top div.navbar-header div.logo img,
+    .navbar-fixed-top div.navbar-header div.logo img,
+    section.cta div.logo img {
+        width: 160px;
+        margin: 0 auto 10px 0;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+   .navbar-header {
+        float: none;
+    } 
 }
 
-section.cta div.pic img {
+@media screen and (max-width:767px){
+    div.to-top div.navbar-header div.logo img.sublogo,
+    .navbar-fixed-top div.navbar-header div.logo img.sublogo,
+    section.cta div.logo img.sublogo{
+        display: none;
+    }
+    div.to-top div.navbar-header div.logo img.ntu,
+    .navbar-fixed-top div.navbar-header div.logo img.ntu,
+    section.cta div.logo img.ntu{
+        display: none;
+    }
+}
+
+section.cta.home div.lang{
+    position: absolute;
+    top: -38px;
+    right: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    section.cta.home div.lang{
+        position: absolute;
+        top: -45px;
+        right: 15px;
+    }
+}
+section.cta.home div.lang h5 i{
+    font-size: 16px;
+}
+@media screen and (max-width:767px) {
+    section.cta.home div.lang{
+        display: none;
+    }
+}
+
+
+
+/* section.cta div.pic img {
     width: 80%;
-}
-@media (max-width:767px) {
+} */
+@media screen and (max-width:767px) {
     section.cta div.pic img {
         width: 100%;
     }
@@ -178,9 +276,16 @@ div.container div.aboutimg img {
     letter-spacing: 1px;
     color: #f8f8f8;
 }
-
+section.cta.home ul.home_nav{
+    margin-top: 100px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+   section.cta.home ul.home_nav{
+        margin-top: 30px;
+    }
+}
 .layer_title {
-    width: 200px;
+    /* width: 200px; */
     height: 80px;
     font-family: PingFangTC;
     font-size: 18px;
@@ -189,6 +294,12 @@ div.container div.aboutimg img {
     font-stretch: normal;
     letter-spacing: 0.9px;
     color: #f8f8f8;
+    text-align: right;
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .layer_title {
+        height: 57px;    
+    }
 }
 
 .text_white ,a.text_white:hover,a.text_white:active,a.text_white:focus{
@@ -252,7 +363,7 @@ header .intro-text .skills {
     font-weight: 300
 }
 
-@media (min-width:768px) {
+@media screen and (min-width:768px) {
     header .container {
         /*padding-top: 100px;
         padding-bottom: 100px*/
@@ -338,9 +449,8 @@ header .intro-text .skills {
     border-color: #18BC9C
 }
 
-@media (min-width:768px) {
+@media screen and (min-width:767px) {
     .navbar-custom {
-        /*background: none;*/
         background: #2C3E50;
         padding: 25px 0;
         -webkit-transition: padding .3s;
@@ -368,9 +478,17 @@ header .intro-text .skills {
         font-size: 1.5em
     }
 }
-
+@media screen and (min-width:767px) and (max-width:991px) {
+    .navbar-custom {
+        background: #2C3E50;
+        padding: 10px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s
+    }
+}
 section.cta {
-    padding: 60px;
+    padding: 50px 0;
     position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -385,21 +503,15 @@ section.cta .cta-content {
     z-index: 1;
 }
 
-@media (min-width:767px) {
+@media screen and (min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px
     }
 }
-
-section {
-    padding: 50px 0;
-}
-
 section.content {
-    padding: 200px 0 50px 0;
+    padding: 150px 0 50px 0;
     min-height: 830px;
 }
-
 .section_new {
     padding: 75px 0;
 }
@@ -453,17 +565,13 @@ section.content {
     border-left: 5px solid #fff;
 }
 
-section h2 {
-    margin: 0;
-    font-size: 3em
-}
 
 section.success {
     background: #18BC9C;
     color: #fff
 }
 
-@media (max-width:767px) {
+@media screen and (max-width:767px) {
     section {
         padding: 60px 0
     }
@@ -550,7 +658,7 @@ section.success {
     z-index: 2
 }
 
-@media (min-width:767px) {
+@media screen and (min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px
     }
@@ -861,24 +969,20 @@ div.topbar{
     transition:all .5s;
     z-index: 10000;
 }
-@media (max-width:767px) {
+@media screen and (max-width:767px) {
     div.topbar{
         padding-top: 5px;
         padding-bottom: 5px;
     }
 }
-@media screen and (min-width:767px){
+@media screen and (min-width:992px){
     div.topbar.to-top{
-       top:-129px; 
-       
+       top:-153px; 
     }
-
 } 
-
-@media screen and (min-width:768px) and (max-width:992px){
+@media screen and (min-width:768px) and (max-width:991px){
     div.topbar.to-top{
-       top:-167px; 
-
+       top:-167px;
     }
 }
  
@@ -895,7 +999,7 @@ div.topbar.to-top.slide-effect{
     height: 200px;
 }
 
-@media (max-width:767px) {
+@media screen and (max-width:767px) {
     .members_icon_phone{
         display: none;
     }
@@ -911,7 +1015,7 @@ div.topbar.to-top.slide-effect{
     }
    
 }
-@media (max-width:413px) {
+@media screen and (max-width:413px) {
     li.address_left{
         padding-left: 35px;
     }
@@ -925,3 +1029,96 @@ div a.btn_right{
     width: 80%;
 }
 
+
+
+section.content ul.links li{
+    font-size: 18px;
+}
+
+section.content div#staff a{
+    color: #333;
+    text-decoration: none;
+}
+section.content div#staff h3{
+    position: relative;
+    margin: 80px 0 10px 0;
+    font-size: 20px;
+}
+section.content div#staff h3:after{
+        content: "";
+        background-color: #eee;
+        width: 80%;
+        height: 1px;
+        margin-left: 10%;
+        position: absolute;
+        bottom: -165px;
+        left: 0;
+    }
+@media screen and (max-width:767px) {
+    section.content div#staff h3{
+        margin: 60px 0 20px 0;
+    }
+    section.content div#staff h3:after{
+        bottom: -335px;
+    }
+}
+section.content div#staff a:link{
+    color: #333;
+}
+
+
+section.cta.home div.img-right img{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+section.content.aboutus div.staff-info dl dt{
+    width: 25px;
+    text-align: center;
+}
+section.content.aboutus div.staff-info dl dd{
+    margin-left: 33px;
+}
+@media screen and (max-width:767px) {
+    section.content.aboutus div.staff-info dl dt{
+        margin: 5px auto 0 auto;
+    }
+    section.content.aboutus div.staff-info dl dd{
+        margin-left: 0;
+    }
+}
+
+section.content.credit .panel-default>.panel-heading{
+    background-color: #db717e;
+}
+section.content.credit div.panel-heading+div.panel-collapse{
+    border-radius: 0 0 4px 4px;
+    border: solid 1px #db717e;
+}
+section.content.credit div#FAQ div.collapsed{
+    background-color: #f5f5f5;
+}
+section.content.credit div.panel-heading h4{
+    color: #fff;
+}
+section.content.credit div#FAQ div.panel-heading.collapsed h4{
+    color: #333;
+}
+
+@media screen and (min-width:768px) {
+    div.download{
+        text-align: right;
+    }
+}
+@media screen and (max-width:767px) {
+    section.content.instrument div#application div.downdate, section.content.credit div#file div.downdate,section.content.credit div.downdate,div.downdate{
+        text-align: right;
+    }
+}
+div#laboratory h3, div#Lease h3{
+    font-size: 20px;
+}
+button.btn_new{
+    margin-top: 20px;
+}

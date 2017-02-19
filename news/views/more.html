@@ -1,26 +1,37 @@
-<section class="content">
+<section class="content credit">
     <div class="container">
         <div class="row">
             <div class="bs-example bs-example-tabs" role="tabpanel">
                 <div id="myTabContent" class="tab-content ">
                     <div role="tabpanel" class="tab-pane fade in active" id="Speech" aria-labelledBy="Speech-tab">
                         <div class="container">
-                            <br>
-                            <br>
                             <div class="row">
                                 <div class="col-sm-12 text-center">
-                                    <div class="col-sm-4">
-                                    </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-push-4 col-sm-4">
                                         <h3>{{title}}</h3>
                                     </div>
-                                    <div class="col-sm-4">
-                                    </div>
+                                    <br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in filteredTodos">
+                                    <div class="col-sm-12" ng-if="digitalPublication" ng-repeat="New in filteredTodos| orderBy:'date':true">
+                                        <div class="col-sm-10">
+                                            <p>
+                                                {{New.titleZH_TW}}
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <a target="_blank" href="{{New.fileLink}}"><i class="fa fa-download" aria-hidden="true"></i> 下載檔案</a>
+                                        </div>
+                                        <div class="col-sm-12 downdate">
+                                            <small>
+                                                {{New.date}}
+                                            </small>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12" ng-repeat="New in filteredTodos" ng-if="!digitalPublication">
                                         <hr>
                                         <p class="col-sm-10">
                                             <a href="news/news_form/{{New.newsNo}}"> {{New.titleZH_TW}}</a>

@@ -1,13 +1,13 @@
-<section class="content">
+<section class="content credit">
     <div class="container">
         <div class="row">
             <div class="bs-example bs-example-tabs" role="tabpanel">
                 <ul id="myTab" class="nav nav-pills nav-justified " role="tablist">
-                    <li class="active"><a href="credit#Introduction" id="Introduction-tab" role="tab" data-toggle="tab" aria-controls="Introduction" aria-expanded="true"><h4 class="text_black">簡介</h4></a></li>
+                    <li class="active"><a href="credit#Introduction" id="Introduction-tab" role="tab" data-toggle="tab" aria-controls="Introduction" aria-expanded="true"><h4 class="text_black">源起與簡介</h4></a></li>
                     <li><a href="credit#rules" role="tab" id="rules-tab" data-toggle="tab" aria-controls="file"><h4 class="text_black">設置辦法</h4></a></li>
                     <li> <a href="credit#Regulations" role="tab" id="Regulations-tab" data-toggle="tab" aria-controls="Regulations"><h4 class="text_black">修課規定</h4></a></li>
-                    <li><a href="credit#Previous" role="tab" id="Previous-tab" data-toggle="tab" aria-controls="Previous"><h4 class="text_black">歷屆學長姐</h4></a></li>
-                    <li><a href="credit#FAQ" role="tab" id="FAQ-tab" data-toggle="tab" aria-controls="FAQ"><h4 class="text_black">FAQ</h4></a></li>
+                    <li><a href="credit#FAQ" role="tab" id="FAQ-tab" data-toggle="tab" aria-controls="FAQ"><h4 class="text_black">常見問題</h4></a></li>
+                    <li><a href="credit#Previous" role="tab" id="Previous-tab" data-toggle="tab" aria-controls="Previous"><h4 class="text_black">心得分享</h4></a></li>
                     <li><a href="credit#file" role="tab" id="file-tab" data-toggle="tab" aria-controls="file"><h4 class="text_black">文件下載</h4></a></li>
                 </ul>
                 
@@ -70,7 +70,7 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="row">
                                         <blockquote class="blockquote_credit">
-                                            <p>中心必修課</p>
+                                            <p>必修課</p>
                                         </blockquote>
                                         <div ng-repeat="Course_Rules in course_rules | filter:{'courseType':'1'}:true">
                                             <blockquote class="blockquote_font">
@@ -87,7 +87,7 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="row">
                                         <blockquote class="blockquote_credit">
-                                            <p>進階課一</p>
+                                            <p>進階課</p>
                                         </blockquote>
                                         <div ng-repeat="Course_Rules in course_rules  | filter:{'courseType':'2'}:true">
                                             <blockquote class="blockquote_font">
@@ -104,7 +104,7 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="row">
                                         <blockquote class="blockquote_credit">
-                                            <p>進階課二</p>
+                                            <p>選修課</p>
                                         </blockquote>
                                         <div ng-repeat="Course_Rules in course_rules  | filter:{'courseType':'3'}:true">
                                             <blockquote class="blockquote_font">
@@ -121,7 +121,7 @@
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="row">
                                         <blockquote class="blockquote_credit">
-                                            <p>選修課</p>
+                                            <p>其他</p>
                                         </blockquote>
                                         <div ng-repeat="Course_Rules in course_rules  | filter:{'courseType':'4'}:true">
                                             <blockquote class="blockquote_font">
@@ -168,53 +168,114 @@
                                     <div class="panel-group" id="faqAccordion">
                                         <div class="panel panel-default ">
                                             <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
-                                                <h4 class="panel-title">1. 常問的中文問題?</h4>
+                                                <h4 class="panel-title">1. 現為本校研究所學生，大學部時為外校，如何充抵外校已修學分?</h4>
                                             </div>
                                             <div id="question0" class="panel-collapse collapse" style="height: 0px;">
                                                 <div class="panel-body">
-                                                    <h5><span class="label label-primary">Answer</span></h5>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five <a href="http://jquery2dotnet.com/" class="label label-success">http://jquery2dotnet.com/</a> centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                    </p>
+                                                    <p>本校研究生，曾於本校學士班時期修習之科目學分，經本校各學程同意者，可直接採  計學程之學分。　若係曾於外校學士班時期修習之科目學分，原則上不予承認，但若該科目學分業已依本校「學生抵免學分辦法」之規定，經由研究生就讀系所核准抵免並印在本校歷年成績表上者，則可經本校各學程同意後，採計為學程之學分。若大學非本校學生請向教務處提出課程抵免，詳細抵免方式請向教務處詢問，建議即刻提出申請以免有時效性問題。</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <br>
                                         <div class="panel panel-default ">
                                             <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
-                                                <h4 class="panel-title">2. 常問的中文問題?</h4>
+                                                <h4 class="panel-title">2. 在此學程的修課說明中，普通心理學和普通生物學是標示三學分，若只修一學期的三學分，如此還需要修下下學期的三學分嗎?如果需要，那多出的三學分可以作為選修學分嗎？</h4>
                                             </div>
                                             <div id="question1" class="panel-collapse collapse" style="height: 0px;">
                                                 <div class="panel-body">
-                                                    <h5><span class="label label-primary">Answer</span></h5>
-                                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                                                    <p>依照學分學程修習規定，普心只需3學分，普生也只需3學分，因此超出3學分的普心或普生均可以滿足學程需求，但多出的學分不可作為選修學分。</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <br>
                                         <div class="panel panel-default ">
                                             <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
-                                                <h4 class="panel-title">3. 常問的中文問題?</h4>
+                                                <h4 class="panel-title">3. 依課程描述，有的課有要求先修科目，有的課有限本系所學生之規定要如何不被擋修呢？</h4>
                                             </div>
                                             <div id="question2" class="panel-collapse collapse" style="height: 0px;">
                                                 <div class="panel-body">
-                                                    <h5><span class="label label-primary">Answer</span></h5>
-                                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                                                    <p>所有課程之先修科目規定，均尊重開課老師安排。本學程課程之”限本系所學生”規定，學程可以協助與開課系所及老師協商。</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <br>
                                         <div class="panel panel-default ">
                                             <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
-                                                <h4 class="panel-title">4. 常問的中文問題?</h4>
+                                                <h4 class="panel-title">4. 此學程有要求三學分的統計，是否任何科系開的3學分統計課，學程都承認？</h4>
                                             </div>
                                             <div id="question3" class="panel-collapse collapse" style="height: 0px;">
                                                 <div class="panel-body">
-                                                    <h5><span class="label label-primary">Answer</span></h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                                                    <p>任何科系開的3學分以上(含)統計課，均滿足學程要求。</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <br>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question4">
+                                                <h4 class="panel-title">5. 神經生物與認知科學學程的中心必修課中要求參與專題研究，有哪些教授的實驗室是開放給本學程的學生選修的呢?另外，在申請學程之前是否要先經過該實驗室的老師許可呢?</h4>
+                                            </div>
+                                            <div id="question4" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p>同學只要找有課號的任何老師的獨立研究或專題研究都可，但先要任課老師同意接受。如果沒有課號，歡迎老師新開，請同學與老師協商同意開課後，立即向學程反應。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question5">
+                                                <h4 class="panel-title">6. 學分學程必修課表「專題研究」一項中可否以「學士論文」或「碩士論文」充抵?</h4>
+                                            </div>
+                                            <div id="question5" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p>必修課程中的專題研究可以以神經生物或認知科學相關之碩士論文、博士論文充抵。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question6">
+                                                <h4 class="panel-title">7. 神經生理實驗或神經解剖實驗都不能抵神經生物實驗嗎?</h4>
+                                            </div>
+                                            <div id="question6" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p>神經生物實驗為入門實驗，性質不同於研究所課程，所以無法以神經生理實驗，神經解剖實驗或其他專業實驗課程充抵。建議同學修習神經生物實驗。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question7">
+                                                <h4 class="panel-title">8. 是否可以先修神經生物實驗再修神經生物學?</h4>
+                                            </div>
+                                            <div id="question7" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p>雖然此二門課程均無先修規定，仍建議同學先修神經生物學，有了基本概念後再修實驗課。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question8">
+                                                <h4 class="panel-title">9. 畢業前沒有修完學程規定學分可否拿到學分證明？</h4>
+                                            </div>
+                                            <div id="question8" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p>畢業前沒有修完無法拿到學分證明。但同學可以在研究所繼續修習。另外延畢的規定如下：依本校「跨院系所學程設置準則」第七條之規定：「修讀學分學程學生，已符合本學系、所畢業資格而尚未修滿學程規定之科目與學分，得向教務處申請延長修業年限，至多以二年為限，但總修業年限仍應符合大學法修業年限規定。」</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="panel panel-default ">
+                                            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question9">
+                                                <h4 class="panel-title">10. 學程是否有建議課程修習順序?
+</h4>
+                                            </div>
+                                            <div id="question9" class="panel-collapse collapse" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p>沒有，原則上學程的課程都是獨立的課程。</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -227,18 +288,22 @@
                             <div class="row">
                                 <br>
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <table class="table table-hover" ng-repeat="Course_Downloads in course_downloads">
-                                        <tbody>
-                                            <tr>
-                                                <td class="col-md-8">
-                                                    <p>{{Course_Downloads.title}}</p>
-                                                </td>
-                                                <td class="col-md-4">
-                                                    <p><a target="_blank" href="{{Course_Downloads.fileLink}}"><i class="fa fa-download" aria-hidden="true"></i> 下載檔案</a></p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="col-sm-12" ng-repeat="Course_Downloads in course_downloads |orderBy:'date':true">
+                                        <div class="col-sm-10">
+                                            <p>
+                                                {{Course_Downloads.title}}
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <a target="_blank" href="{{Course_Downloads.fileLink}}"><i class="fa fa-download" aria-hidden="true"></i> 下載檔案</a>
+                                        </div>
+                                        <div class="col-sm-12 downdate">
+                                            <small>
+                                                {{Course_Downloads.createdDate}}
+                                            </small>
+                                            <hr>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,53 +1,42 @@
-<section class="cta">
+<section class="cta home">
     <div class="cta-content">
         <div class="container">
-            <div class="row col-sm-12">
-                <div class="col-sm-8">
-                    <div class="navbar-header logo">
+            <div class="lang">
+                        <a class="text_white pull-right" href="home_en"><h5><i class="fa fa-globe" aria-hidden="true"></i> English</h5></a>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo">
                         <a href="#">
                             <img src="img/pic/ncsc_logo_white.png" alt="">
                         </a>
+                        <a href="https://www.ntu.edu.tw" target="_blank">
+                            <img src="images/ntu_logo.png" alt="" class="ntu">
+                        </a>
+                        <img src="images/title_w.png" alt="" class="sublogo">
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav-justified">
-                            <li>
-                                <a class="text_white pull-right" href="home"><h4>中文</h4></a>
-                            </li>
-                            <li>
-                                <a class="text_white pull-right" href="home_en"><h4>English</h4></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </div>        
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div class="row col-sm-12 pic">
-                <div class="col-sm-6" ng-model="hero">
+            <div class="row pic">
+                <div class="col-sm-5" ng-model="hero">
                     <img class="img-responsive " src="{{hero[0].fileLink}}" alt="">
                     <br>
                     <img class="img-responsive " src="{{hero[1].fileLink}}" alt="">
                 </div>
-                <div id="home_hidden" class="col-sm-4">
-                    <img class="img-responsive center-block" src="{{hero[2].fileLink}}" alt="">
+                <div id="home_hidden" class="col-sm-5 img-right">
+                    <img class="img-responsive" src="{{hero[2].fileLink}}" alt="" style="width:65%;">
                     <br>
-                    <img class="img-responsive center-block" src="{{hero[3].fileLink}}" alt="">
+                    <img class="img-responsive" src="{{hero[3].fileLink}}" alt="" style="width:65%;">
                 </div>
                 <div class="col-sm-2" id="home_hidden">
-                    <div class="row col-sm-12">
-                        <div class="col-sm-1"></div>
-                        <div class="col-sm-5 layer_title "></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="news"><h4>最新消息</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="about"><h4>關於我們</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="instrument"><h4>核心儀器</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="members"><h4>中心成員</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="credit"><h4>學分學程</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="links"><h4>相關連結</h4></a></div>
-                    </div>
+                    <ul class="home_nav">
+                        <li class="layer_title "><a class="text_white" href="news"><h4>最新消息</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="about"><h4>關於我們</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="members"><h4>中心成員</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="credit"><h4>學分學程</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="instrument"><h4>核心設施</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="links"><h4>相關連結</h4></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -72,7 +61,7 @@
         <br>
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <div class="col-sm-12" ng-repeat="New in news|limitTo:5">
+                <div class="col-sm-12" ng-repeat="New in news|limitTo:5|orderBy:'date':true">
                     <p class="col-sm-10">
                         <a href="news/news_form/{{New.newsNo}}"> {{New.titleZH_TW}}</a>
                     </p>

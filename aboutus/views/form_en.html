@@ -1,0 +1,32 @@
+<section class="content">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <img class="img-circle img-responsive center-block" ng-src="images/graduate1.png" alt="">
+            </div>
+            <div class="col-sm-8" ng-repeat="Model in model">
+                <dl class="dl-horizontal h3">
+                    <dt><i class="fa fa-user"></i></dt>
+                    <dd>{{Model.Name_EN}}</dd>
+                    <dt></dt>
+                    <dd>{{Model.title_EN}}</dd>
+                    <dt></dt>
+                    <dt><i class="fa fa-phone"></i></dt>
+                    <dd>Office: {{Model.phone}}</dd>
+                    <dt></dt>
+                    <!-- <dd>Lab: +886 - 2 - 33663827</dd> -->
+                    <br>
+                    <dt><i class="fa fa-envelope"></i></dt>
+                    <dd>{{Model.mail}}</dd> 
+                </dl>
+            </div>
+        </div>
+        <hr>        
+        <div class="row">
+            <div class="col-md-1 col-md-offset-11">
+                <a class="btn btn-primary" href="#/about_en  "><span class="glyphicon glyphicon-chevron-left"></span>Back</a>
+            </div>
+        </div>
+    </div>
+</section>

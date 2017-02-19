@@ -1,55 +1,43 @@
-<section class="cta">
+<section class="cta home">
     <div class="cta-content">
         <div class="container">
-            <div class="row col-sm-12">
-                <div class="col-sm-8">
-                    <div class="navbar-header logo">
-                        <a href="home_en">
+            <div class="lang">
+                <a class="text_white pull-right" href="home"><h5><i class="fa fa-globe" aria-hidden="true"></i> 中文</h5></a>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo">
+                        <a href="#">
                             <img src="img/pic/ncsc_logo_white.png" alt="">
                         </a>
+                        <a href="https://www.ntu.edu.tw" target="_blank">
+                            <img src="images/ntu_logo.png" alt="" class="ntu">
+                        </a>
+                        <img src="images/title_w.png" alt="" class="sublogo">
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav-justified">
-                            <li>
-                                <a class="text_white pull-right" href="home"><h4>中文</h4></a>
-                            </li>
-                            <li>
-                                <a class="text_white pull-right" href="home_en"><h4>English</h4></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </div>        
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
             <div class="row col-sm-12 pic">
-                <div class="col-sm-6" ng-model="hero">
+                <div class="col-sm-5" ng-model="hero">
                     <img class="img-responsive " src="{{hero[0].fileLink}}" alt="">
                     <br>
                     <img class="img-responsive " src="{{hero[1].fileLink}}" alt="">
                 </div>
-                <div id="home_hidden" class="col-sm-4">
-                    <img class="img-responsive center-block" src="{{hero[2].fileLink}}" alt="">
+                <div id="home_hidden" class="col-sm-5 img-right">
+                    <img class="img-responsive" src="{{hero[2].fileLink}}" alt="" style="width:65%;">
                     <br>
-                    <img class="img-responsive center-block" src="{{hero[3].fileLink}}" alt="">
+                    <img class="img-responsive" src="{{hero[3].fileLink}}" alt="" style="width:65%;">
                 </div>
                 <div class="col-sm-2" id="home_hidden">
-                    <div class="row col-sm-12">
-                        <div class="col-sm-1"></div>
-                        <div class="col-sm-5 layer_title "></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="news_en"><h4>news</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="about_en"><h4>about us</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="instrument_en"><h4>Laboratory Equipment</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="members_en"><h4>members</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="credit_en"><h4>credit courses</h4></a></div>
-                        <div class="col-sm-5 layer_title "><a class="text_white" href="links_en"><h4>related links</h4></a></div>
-                    </div>
+                    <ul class="home_nav">
+                        <li class="layer_title "><a class="text_white" href="news_en"><h4>news</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="about_en"><h4>about us</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="members_en"><h4>members</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="credit_en"><h4>credit courses</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="instrument_en"><h4>Laboratory Equipment</h4></a></li>
+                        <li class="layer_title "><a class="text_white" href="links_en"><h4>related links</h4></a></li>
+                    </ul>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -73,7 +61,7 @@
         <br>
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <div class="col-sm-12" ng-repeat="New in news|limitTo:5">
+                <div class="col-sm-12" ng-repeat="New in news|limitTo:5|orderBy:'date':true">
                     <p class="col-sm-10">
                         <a href="news/news_form_en/{{New.newsNo}}">{{New.titleEN}}</a>
                     </p>

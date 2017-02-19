@@ -13,7 +13,7 @@ app
 
     $scope.filteredTodos = [], $scope.currentPage = 1, $scope.numPerPage = 10, $scope.maxSize = 5;
 
-    var url_address = 'geJSONt/data.php?page=home_news';
+    var url_address = 'getDATA/data.php?page=home_news';
 
     $http.get(url_address).then(
 
@@ -37,7 +37,7 @@ app
 
     $scope.year = function(value) {
 
-        var url_address = 'geJSONt/data_years.php?page=news&id=' + value;
+        var url_address = 'getDATA/data_years.php?page=news&id=' + value;
 
         $http.get(url_address).then(
 
@@ -56,7 +56,7 @@ app
 
     $scope.more = function(value) {
 
-        var url_address = 'geJSONt/data.php?page=news_type&id=' + value;
+        var url_address = 'getDATA/data.php?page=news_type&id=' + value;
 
         $http.get(url_address).then(
 
@@ -87,7 +87,7 @@ app
     //傳news id 至 indexController 
     $rootScope.$broadcast('newsid', value);
 
-    var url_address = 'geJSONt/data_news.php?page=news&id=' + value;
+    var url_address = 'getDATA/data_news.php?page=news&id=' + value;
     $http.get(url_address).then(
 
         function(data) {
@@ -121,22 +121,26 @@ app
     //傳news id 至 indexController 
     $rootScope.$broadcast('newsid', value);
     if (value == '1') {
-        $scope.title = "演講";
-        $scope.title_en = "SPEECHES";
+        $scope.digitalPublication = false;
+        $scope.title = "演講及會議訊息";
+        $scope.title_en = "Speeches and Seminars";
     } else if (value == '2') {
-        $scope.title = "研討會";
-        $scope.title_en = "SEMINARS";
+        $scope.digitalPublication = false;
+        $scope.title = "訊息公告";
+        $scope.title_en = "Bulletin";
     } else if (value == '3') {
-        $scope.title = "學分學程";
-        $scope.title_en = "CREDIT COURSES";
+        $scope.digitalPublication = true;
+        $scope.title = "電子刊物";
+        $scope.title_en = "digital publications";
     } else if (value == '4') {
-        $scope.title = "得獎紀錄";
-        $scope.title_en = "AWARDS";
+        $scope.digitalPublication = false;
+        $scope.title = "中心花絮";
+        $scope.title_en = "activities";
     }
 
 
 
-    var url_address = 'geJSONt/data.php?page=news_type&id=' + value;
+    var url_address = 'getDATA/data.php?page=news_type&id=' + value;
 
     $http.get(url_address).then(
 
@@ -178,7 +182,7 @@ app
 
     $scope.filteredTodos = [], $scope.currentPage = 1, $scope.numPerPage = 10, $scope.maxSize = 5;
 
-    var url_address = 'geJSONt/data.php?page=home_news';
+    var url_address = 'getDATA/data.php?page=home_news';
 
     $http.get(url_address).then(
 
@@ -202,7 +206,7 @@ app
 
     $scope.year = function(value) {
 
-        var url_address = 'geJSONt/data_years.php?page=news&id=' + value;
+        var url_address = 'getDATA/data_years.php?page=news&id=' + value;
 
         $http.get(url_address).then(
 
@@ -221,7 +225,7 @@ app
 
     $scope.more = function(value) {
 
-        var url_address = 'geJSONt/data.php?page=news_type&id=' + value;
+        var url_address = 'getDATA/data.php?page=news_type&id=' + value;
 
         $http.get(url_address).then(
 
