@@ -32,14 +32,16 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'1'}:true|limitTo:5|orderBy:'date':true">
+                                    <div class="col-sm-12" ng-init="filter_len = (news | filter: { 'newsType':'1'}).length" ng-repeat="New in news| filter:{'newsType':'1'}:true|limitTo:5:filter_len-5|orderBy:'date':true">
                                         <p>
                                             <a href="news/news_form/{{New.newsNo}}"> {{New.titleZH_TW}}</a>
                                         </p>
-                                        <small>
-                                            {{New.date}}
-                                        </small>
-                                        <hr>
+                                        <div class="col-sm-12 downdate">
+                                            <small>
+                                                {{New.date}}
+                                            </small>
+                                            <hr>
+                                        </div>
                                     </div>
                                     <div class="col-sm-12"><a class="btn btn-primary btn_right" href="news/news_more/1">更多 <span class="glyphicon glyphicon-chevron-right"></span></a> </div>
                                 </div>
@@ -67,14 +69,16 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'2'}:true|limitTo:5|orderBy:'date':true">
+                                    <div class="col-sm-12" ng-init="filter_len = (news | filter: { 'newsType':'2'}).length" ng-repeat="New in news| filter:{'newsType':'2'}:true|limitTo:5:filter_len-5|orderBy:'date':true">
                                         <p>
                                             <a href="news/news_form/{{New.newsNo}}">{{New.titleZH_TW}}</a>
                                         </p>
-                                        <small>
-                                            {{New.date}}
-                                        </small>
-                                        <hr>
+                                        <div class="col-sm-12 downdate">
+                                            <small>
+                                                {{New.date}}
+                                            </small>
+                                            <hr>
+                                        </div>
                                     </div>
                                     <div class="col-sm-12"><a class="btn btn-primary btn_right" href="news/news_more/2">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                                 </div>
@@ -93,14 +97,14 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="row" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5|orderBy:'date':true">
+                            <div class="row" ng-init="filter_len = (news | filter: { 'newsType':'3'}).length" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5:filter_len-5|orderBy:'date':true">
                                 <div class="col-sm-10">
                                     <p>
                                         {{New.titleZH_TW}}
                                     </p>
                                 </div>
                                 <div class="col-sm-2 download">
-                                    <a target="_blank" href="{{New.fileLink}}"><i class="fa fa-download" aria-hidden="true"></i> 下載檔案</a>
+                                    <a target="_blank" href="{{New.contentZH_TW}}"><i class="fa fa-download" aria-hidden="true"></i> 下載檔案</a>
                                 </div>
                                 <div class="col-sm-12 downdate">
                                     <small>
@@ -135,14 +139,16 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-repeat="New in news| filter:{'newsType':'4'}:true|limitTo:5|orderBy:'date':true">
+                                    <div class="col-sm-12" ng-init="filter_len = (news | filter: { 'newsType':'4'}).length" ng-repeat="New in news| filter:{'newsType':'4'}:true|limitTo:5:filter_len-5|orderBy:'date':true">
                                         <p>
                                             <a href="news/news_form/{{New.newsNo}}">{{New.titleZH_TW}}</a>
                                         </p>
-                                        <small>
-                                            {{New.date}}
-                                        </small>
-                                        <hr>
+                                        <div class="col-sm-12 downdate">
+                                            <small>
+                                                {{New.date}}
+                                            </small>
+                                            <hr>
+                                        </div>
                                     </div>
                                     <div class="col-sm-12"><a class="btn btn-primary btn_right" href="news/news_more/4">更多 <span class="glyphicon glyphicon-chevron-right"></span></a></div>
                                 </div>
