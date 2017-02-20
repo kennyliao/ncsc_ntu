@@ -95,30 +95,28 @@
                             <br>
                             <div class="row">
                                 <div class="col-sm-12 text-center">
-                                    <div class="col-sm-4">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <h3>digital publications</h3>
-                                    </div>
-                                    <div class="col-sm-4">
-                                    </div>
+                                    <h3>digital publications</h3>
                                 </div>
                             </div>
                             <br>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-10 col-lg-offset-1">
-                                    <div class="col-sm-12" ng-init="filter_len = (news | filter: { 'newsType':'3'}).length" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5:filter_len-5|orderBy:'date':true">
-                                        <p>
-                                            <a href="news/news_form_en/{{New.newsNo}}">{{New.titleEN}}</a>
-                                        </p>
-                                        <small>
-                                            {{New.date}}
-                                        </small>
-                                        <hr>
-                                    </div>
-                                    <div class="col-sm-12"><a class="btn btn-primary btn_right" href="news/news_en_more/3">MORE <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                            <div class="row" ng-init="filter_len = (news | filter: { 'newsType':'3'}).length" ng-repeat="New in news| filter:{'newsType':'3'}:true|limitTo:5:filter_len-5|orderBy:'date':true">
+                                <div class="col-sm-10">
+                                    <p>
+                                        {{New.titleEN}}
+                                    </p>
                                 </div>
+                                <div class="col-sm-2 download">
+                                    <a target="_blank" href="{{New.contentZH_TW}}"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                                </div>
+                                <div class="col-sm-12 downdate">
+                                    <small>
+                                        {{New.date}}
+                                    </small>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <a class="btn btn-primary btn_right" href="news/news_en_more/3">MORE <span class="glyphicon glyphicon-chevron-right"></span></a>
                             </div>
                         </div>
                     </div>
