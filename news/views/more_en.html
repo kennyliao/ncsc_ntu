@@ -18,7 +18,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="col-sm-12" ng-repeat="New in filteredTodos">
                                         <hr>
@@ -36,6 +36,46 @@
                                 </div>
                                 <div class="col-lg-1 col-lg-offset-9">
                                     <a class="btn btn-primary btn_right" ng-click="back()"><span class="glyphicon glyphicon-chevron-left"></span>Back</a>
+                                </div>
+                            </div> -->
+                            <div class="row">
+                                <div class="col-lg-10 col-lg-offset-1">
+                                    <div class="col-sm-12" ng-if="digitalPublication" ng-repeat="New in filteredTodos| orderBy:'date':true">
+                                        <div class="col-sm-10">
+                                            <p>
+                                                {{New.titleEN}}
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <a target="_blank" href="{{New.contentEN}}"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+                                        </div>
+                                        <div class="col-sm-12 downdate">
+                                            <small>
+                                                {{New.date}}
+                                            </small>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12" ng-repeat="New in filteredTodos" ng-if="!digitalPublication">
+                                        <br>
+                                        <p class="col-sm-10">
+                                            <a href="news/news_form_en/{{New.newsNo}}"> {{New.titleEN}}</a>
+                                        </p>
+                                        
+                                        <div class="col-sm-2 col-xs-12 downdate">
+                                            <small>
+                                                {{New.date}}
+                                            </small>    
+                                        </div>
+                                        <br clear="all">
+                                        <hr>
+                                    </div>
+                                    <!-- <ul uib-pagination total-items="news .length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false">
+                                    </ul> -->
+                                    <ul uib-pagination boundary-links="true" total-items="news .length" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+                                </div>
+                                <div class="col-lg-1 col-lg-offset-9">
+                                    <a class="btn btn-primary btn_right" ng-click="back()"><span class="glyphicon glyphicon-chevron-left"></span>Back </a>
                                 </div>
                             </div>
                         </div>

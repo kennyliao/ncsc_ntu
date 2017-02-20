@@ -16,6 +16,7 @@
                             <div class="row">
                                 <div class="col-lg-10 col-lg-offset-1">
                                     <div class="col-sm-12" ng-if="digitalPublication" ng-repeat="New in filteredTodos| orderBy:'date':true">
+                                        <br>
                                         <div class="col-sm-10">
                                             <p>
                                                 {{New.titleZH_TW}}
@@ -32,16 +33,21 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-12" ng-repeat="New in filteredTodos" ng-if="!digitalPublication">
-                                        <hr>
+                                        <br>
                                         <p class="col-sm-10">
                                             <a href="news/news_form/{{New.newsNo}}"> {{New.titleZH_TW}}</a>
                                         </p>
-                                        <p class="col-sm-2 text-muted">
+                                       <!--  <p class="col-sm-2 text-muted">
                                             {{New.nameZH_TW}}
-                                        </p>
-                                        <small>
-                                            {{New.date}}
-                                        </small>
+                                        </p> -->
+                                        <div class="col-sm-2 col-xs-12 downdate">
+                                            <small>
+                                                {{New.date}}
+                                            </small>
+                                            
+                                        </div>
+                                        <br clear="all">
+                                        <hr>
                                     </div>
                                     <!-- <ul uib-pagination total-items="news .length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false">
                                     </ul> -->
