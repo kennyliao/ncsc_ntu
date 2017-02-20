@@ -44,7 +44,14 @@ app
 
     $scope.year = function(value) {
 
-        var url_address = 'getDATA/data_years.php?page=news&id=' + value;
+        if(value=='all'){
+             var url_address = 'getDATA/data.php?page=home_news';
+        }
+        else{
+            var url_address = 'getDATA/data_years.php?page=news&id=' + value;
+        }
+
+        // var url_address = 'getDATA/data_years.php?page=news&id=' + value;
 
         $http.get(url_address).then(
 
@@ -220,7 +227,13 @@ app
 
     $scope.year = function(value) {
 
-        var url_address = 'getDATA/data_years.php?page=news&id=' + value;
+        if(value=='all'){
+            var url_address = 'getDATA/data.php?page=home_news';
+        }
+        else{
+            var url_address = 'getDATA/data_years.php?page=news&id=' + value;
+        }
+        // var url_address = 'getDATA/data_years.php?page=news&id=' + value;
 
         $http.get(url_address).then(
 
