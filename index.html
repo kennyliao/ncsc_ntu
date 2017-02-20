@@ -116,7 +116,7 @@
                             <a class="text_white" href="credit_en" ng-class="{'active1':  $location.path() == '/credit_en'}" ng-click="click()"><h4>credit courses</h4></a>
                         </li>
                         <li>
-                            <a class="text_white" href="instrument_en" ng-class="{'active1':  $location.path() == '/instrument_en'}" ng-click="click()"><h4>Laboratory Equipment</h4></a>
+                            <a class="text_white" href="instrument_en" ng-class="{'active1':  $location.path() == '/instrument_en'}" ng-click="click()"><h4>CORE FACILITY</h4></a>
                         </li>
                         <li>
                             <a class="text_white" href="links_en" ng-class="{'active1':  $location.path() == '/links_en'}" ng-click="click()"><h4>related links</h4></a>
@@ -136,7 +136,7 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-9">
+                    <div class="footer-col col-sm-9">
                         <ul class="list-inline">
                             <li>
                                 <i class="fa fa-fw fa-phone"></i>
@@ -157,33 +157,43 @@
                             <li>
                                 <i class="fa fa-fw fa-map-marker"></i>
                             </li>
-                            <li>
+                            <li ng-if="!en">
                                 10617 台北市羅斯福路四段1號
                             </li>
-                            <li class="address_left">
+                            <li class="address_left" ng-if="!en">
                                 心理系南館107室
+                            </li>
+                            <li ng-if="en">
+                                Dept. of Psychology (South Hall), No.1, Section 4, Roosevelt Road, Da’an District, Taipei City, 10617
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-col col-md-3">
+                    <div class="footer-col col-sm-3">
                         <div class="form-group" ng-if="en">                          
                             <select class="form-control phone_select" id="sel1" onchange="javascript:location.href = this.value;">
                                 <option value="0" selected>語言</option>
                                 <option value="{{page}}" id="ch">中文</option>
                                 <option value="{{page}}_en" id="en">English</option>                       
                             </select>
-                            <a href="geJSONt/RSS_EN.php" target="_blank">
+                            <a href="getDATA/RSS_EN.php" target="_blank">
                               <img src="images/rss.png" height="30" width="30">
+                            </a>
+                            <a href="https://www.facebook.com/NTU-Neuroscience-280649875400088/?ref=aymt_homepage_panel" target="_blank">
+                              <img src="images/fb.png" height="30" width="30">
                             </a>
                         </div>
                         <div class="form-group" ng-if="!en">                          
                             <select class="form-control phone_select" id="sel1" onchange="javascript:location.href = this.value;">
                                 <option value="0" selected>Language</option>
-                                <option value="{{page}}" id="ch" >中文</option>
                                 <option value="{{page}}_en" id="en">English</option>
+                                <option value="{{page}}" id="ch" >中文</option>
+                                
                             </select>                           
-                            <a href="geJSONt/RSS.php" target="_blank">
+                            <a href="getDATA/RSS.php" target="_blank">
                               <img src="images/rss.png" height="30" width="30">
+                            </a>
+                            <a href="https://www.facebook.com/NTU-Neuroscience-280649875400088/?ref=aymt_homepage_panel" target="_blank">
+                              <img src="images/fb.png" height="30" width="30">
                             </a>
                         </div>                                       
                     </div>
@@ -196,7 +206,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; 2017 NCSC NTU
+                        Copyright &copy; {{date | date:'yyyy'}} NCSC NTU
                     </div>
                 </div>
             </div>

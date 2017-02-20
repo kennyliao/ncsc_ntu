@@ -4,6 +4,8 @@ app
 
     .controller('IndexController',function($scope,$http,$filter,toastr,$base64,$rootScope,$location) {
 		
+    	$scope.date = new Date();
+		
 		//判斷$location.path()是否一致
 		$scope.$on('membersid', function(event, value1) {
 
